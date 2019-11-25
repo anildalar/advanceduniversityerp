@@ -1,10 +1,10 @@
 # Advanced University Erp
-Author:-  Anil Dollor
-Whatsapp: +91-7999452711
-Skype:-   anildalar
-Email:- dollorinfotech@gmail.com
-Website:- www.dollorinfotech.com
-Location: Neemuch,MP, India
+Author:-  Anil Dollor<br>
+Whatsapp: +91-7999452711<br>
+Skype:-   anildalar<br>
+Email:- dollorinfotech@gmail.com<br>
+Website:- www.dollorinfotech.com<br>
+Location: Neemuch,MP, India<br>
 
 
 Advanced University ERP With WhiteLable
