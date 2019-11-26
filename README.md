@@ -1,4 +1,4 @@
-# Advanced University Erp
+# Advanced Multi University Management System With White Lable
 Author:-  Anil Dollor<br>
 Whatsapp: +91-7999452711<br>
 Skype:-   anildalar<br>
@@ -6,10 +6,8 @@ Email:- dollorinfotech@gmail.com<br>
 Website:- www.dollorinfotech.com<br>
 Location: Neemuch,MP, India<br>
 
-University Management System
-Developing the UMS
+Developing the Multi University Management System With White Lable
 
-Advanced University ERP With WhiteLable
 
 FrontEnd-
 http://rn53themes.net/themes/demo/education-master/index.html
