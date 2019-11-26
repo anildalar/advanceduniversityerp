@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Nov 25, 2019 at 09:46 AM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 26, 2019 at 01:58 PM
 -- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,7 +44,8 @@ CREATE TABLE `academic_ranks` (
 INSERT INTO `academic_ranks` (`id`, `rank_name`, `rank_order`, `country_id`) VALUES
 (1, 'Professor', '1', '	 99'),
 (2, 'Associate Professor', '2', '	 99'),
-(3, 'Assistant Professor', '3', '	 99');
+(3, 'Assistant Professor', '3', '	 99'),
+(4, 'Jr. Professor', '3', '99');
 
 -- --------------------------------------------------------
 
@@ -66,6 +67,20 @@ CREATE TABLE `branches` (
 
 INSERT INTO `branches` (`branch_id`, `branch_name`, `branch_code`, `created_at`, `university_id`) VALUES
 (1, 'BE BIO TECH', 'BEBIOTECH', '2019-11-19 09:18:52', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -117,7 +132,7 @@ INSERT INTO `college_affiliations` (`id`, `affiliation_name`, `affiliation_descr
 --
 
 CREATE TABLE `college_courses` (
-  `college_courses_id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `college_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `course_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `university_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -133,6 +148,14 @@ CREATE TABLE `college_types` (
   `id` int(11) NOT NULL,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `college_types`
+--
+
+INSERT INTO `college_types` (`id`, `type`) VALUES
+(1, 'GOVT'),
+(2, 'PRIVATE');
 
 -- --------------------------------------------------------
 
@@ -520,6 +543,63 @@ INSERT INTO `departments` (`department_id`, `department_name`, `department_descr
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `exams`
+--
+
+CREATE TABLE `exams` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `sesion_id` int(11) NOT NULL,
+  `note` text,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exam_results`
+--
+
+CREATE TABLE `exam_results` (
+  `id` int(11) NOT NULL,
+  `attendence` varchar(10) NOT NULL,
+  `exam_schedule_id` int(11) DEFAULT NULL,
+  `student_id` int(11) DEFAULT NULL,
+  `get_marks` float(10,2) DEFAULT NULL,
+  `note` text,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exam_schedules`
+--
+
+CREATE TABLE `exam_schedules` (
+  `id` int(11) NOT NULL,
+  `session_id` int(11) NOT NULL,
+  `exam_id` int(11) DEFAULT NULL,
+  `teacher_subject_id` int(11) DEFAULT NULL,
+  `date_of_exam` date DEFAULT NULL,
+  `start_to` varchar(50) DEFAULT NULL,
+  `end_from` varchar(50) DEFAULT NULL,
+  `room_no` varchar(50) DEFAULT NULL,
+  `full_marks` int(11) DEFAULT NULL,
+  `passing_marks` int(11) DEFAULT NULL,
+  `note` text,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `faculties`
 --
 
@@ -540,6 +620,119 @@ CREATE TABLE `faculties` (
 INSERT INTO `faculties` (`faculty_id`, `faculty_name`, `faculty_designation`, `faculty_doj`, `created_at`, `college_id`, `university_id`) VALUES
 (1, 'Anil Dollor', 'Asst. Proffesor', '2019-03-01', '2019-11-21 09:34:33', '1', '1'),
 (2, 'Surendra Panday Sir', 'Proffessor', '2019-11-01', '2019-11-21 09:38:38', '', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `grades`
+--
+
+CREATE TABLE `grades` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `point` float(10,1) DEFAULT NULL,
+  `mark_from` float(10,2) DEFAULT NULL,
+  `mark_upto` float(10,2) DEFAULT NULL,
+  `description` text,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `languages`
+--
+
+CREATE TABLE `languages` (
+  `id` int(11) NOT NULL,
+  `language` varchar(50) DEFAULT NULL,
+  `is_deleted` varchar(10) NOT NULL DEFAULT 'yes',
+  `is_active` varchar(255) DEFAULT 'no',
+  `code` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `languages`
+--
+
+INSERT INTO `languages` (`id`, `language`, `is_deleted`, `is_active`, `code`, `created_at`, `updated_at`) VALUES
+(1, 'Azerbaijan', 'no', 'no', 'az', '2019-03-25 14:27:01', '0000-00-00 00:00:00'),
+(2, 'Albanian', 'no', 'no', 'sq', '2019-03-25 14:25:01', '0000-00-00 00:00:00'),
+(3, 'Amharic', 'no', 'no', 'am', '2019-03-25 14:25:16', '0000-00-00 00:00:00'),
+(4, 'English', 'no', 'no', 'en', '2019-03-25 14:32:05', '0000-00-00 00:00:00'),
+(5, 'Arabic', 'no', 'no', 'ar', '2019-03-25 14:26:50', '0000-00-00 00:00:00'),
+(7, 'Afrikaans', 'no', 'no', 'af', '2019-03-25 14:24:33', '0000-00-00 00:00:00'),
+(8, 'Basque', 'no', 'no', 'eu', '2019-03-25 14:27:41', '0000-00-00 00:00:00'),
+(11, 'Bengali', 'no', 'no', 'bn', '2019-03-25 14:27:52', '0000-00-00 00:00:00'),
+(13, 'Bosnian', 'no', 'no', 'bs', '2019-03-25 14:28:03', '0000-00-00 00:00:00'),
+(14, 'Welsh', 'no', 'no', 'cy', '2019-03-25 14:46:16', '0000-00-00 00:00:00'),
+(15, 'Hungarian', 'no', 'no', 'hu', '2019-03-25 14:36:29', '0000-00-00 00:00:00'),
+(16, 'Vietnamese', 'no', 'no', 'vi', '2019-03-25 14:46:06', '0000-00-00 00:00:00'),
+(17, 'Haitian (Creole)', 'no', 'no', 'ht', '2019-03-25 14:35:54', '0000-00-00 00:00:00'),
+(18, 'Galician', 'no', 'no', 'gl', '2019-03-25 14:35:00', '0000-00-00 00:00:00'),
+(19, 'Dutch', 'no', 'no', 'nl', '2019-03-25 14:31:52', '0000-00-00 00:00:00'),
+(21, 'Greek', 'no', 'no', 'el', '2019-03-25 14:35:28', '0000-00-00 00:00:00'),
+(22, 'Georgian', 'no', 'no', 'ka', '2019-03-25 14:35:10', '0000-00-00 00:00:00'),
+(23, 'Gujarati', 'no', 'no', 'gu', '2019-03-25 14:35:38', '0000-00-00 00:00:00'),
+(24, 'Danish', 'no', 'no', 'da', '2019-03-25 14:31:40', '0000-00-00 00:00:00'),
+(25, 'Hebrew', 'no', 'no', 'he', '2019-03-25 14:36:06', '0000-00-00 00:00:00'),
+(26, 'Yiddish', 'no', 'no', 'yi', '2019-03-25 14:46:34', '0000-00-00 00:00:00'),
+(27, 'Indonesian', 'no', 'no', 'id', '2019-03-25 14:36:51', '0000-00-00 00:00:00'),
+(28, 'Irish', 'no', 'no', 'ga', '2019-03-25 14:37:02', '0000-00-00 00:00:00'),
+(29, 'Italian', 'no', 'no', 'it', '2019-03-25 14:37:11', '0000-00-00 00:00:00'),
+(30, 'Icelandic', 'no', 'no', 'is', '2019-03-25 14:36:40', '0000-00-00 00:00:00'),
+(31, 'Spanish', 'no', 'no', 'es', '2019-03-25 14:44:20', '0000-00-00 00:00:00'),
+(33, 'Kannada', 'no', 'no', 'kn', '2019-03-25 14:37:41', '0000-00-00 00:00:00'),
+(34, 'Catalan', 'no', 'no', 'ca', '2019-03-25 14:28:20', '0000-00-00 00:00:00'),
+(36, 'Chinese', 'no', 'no', 'zh', '2019-03-25 14:31:19', '0000-00-00 00:00:00'),
+(37, 'Korean', 'no', 'no', 'ko', '2019-03-25 14:37:55', '0000-00-00 00:00:00'),
+(38, 'Xhosa', 'no', 'no', 'xh', '2019-03-25 14:46:26', '0000-00-00 00:00:00'),
+(39, 'Latin', 'no', 'no', 'la', '2019-03-25 14:38:04', '0000-00-00 00:00:00'),
+(40, 'Latvian', 'no', 'no', 'lv', '2019-03-25 14:38:41', '0000-00-00 00:00:00'),
+(41, 'Lithuanian', 'no', 'no', 'lt', '2019-03-25 14:38:46', '0000-00-00 00:00:00'),
+(43, 'Malagasy', 'no', 'no', 'mg', '2019-03-25 14:39:17', '0000-00-00 00:00:00'),
+(44, 'Malay', 'no', 'no', 'ms', '2019-03-25 14:39:26', '0000-00-00 00:00:00'),
+(45, 'Malayalam', 'no', 'no', 'ml', '2019-03-25 14:39:36', '0000-00-00 00:00:00'),
+(46, 'Maltese', 'no', 'no', 'mt', '2019-03-25 14:39:46', '0000-00-00 00:00:00'),
+(47, 'Macedonian', 'no', 'no', 'mk', '2019-03-25 14:39:06', '0000-00-00 00:00:00'),
+(48, 'Maori', 'no', 'no', 'mi', '2019-03-25 14:39:55', '0000-00-00 00:00:00'),
+(49, 'Marathi', 'no', 'no', 'mr', '2019-03-25 14:40:04', '0000-00-00 00:00:00'),
+(51, 'Mongolian', 'no', 'no', 'mn', '2019-03-25 14:40:14', '0000-00-00 00:00:00'),
+(52, 'German', 'no', 'no', 'de', '2019-03-25 14:35:20', '0000-00-00 00:00:00'),
+(53, 'Nepali', 'no', 'no', 'ne', '2019-03-25 14:40:24', '0000-00-00 00:00:00'),
+(54, 'Norwegian', 'no', 'no', 'no', '2019-03-25 14:40:43', '0000-00-00 00:00:00'),
+(55, 'Punjabi', 'no', 'no', 'pa', '2019-03-25 14:41:20', '0000-00-00 00:00:00'),
+(57, 'Persian', 'no', 'no', 'fa', '2019-03-25 14:40:57', '0000-00-00 00:00:00'),
+(59, 'Portuguese', 'no', 'no', 'pt', '2019-03-25 14:41:09', '0000-00-00 00:00:00'),
+(60, 'Romanian', 'no', 'no', 'ro', '2019-03-25 14:41:41', '0000-00-00 00:00:00'),
+(61, 'Russian', 'no', 'no', 'ru', '2019-03-25 14:43:19', '0000-00-00 00:00:00'),
+(62, 'Cebuano', 'no', 'no', '', '2017-04-06 05:08:33', '0000-00-00 00:00:00'),
+(64, 'Sinhala', 'no', 'no', 'si', '2019-03-25 14:43:46', '0000-00-00 00:00:00'),
+(65, 'Slovakian', 'no', 'no', '', '2017-04-06 05:08:33', '0000-00-00 00:00:00'),
+(66, 'Slovenian', 'no', 'no', 'sl', '2019-03-25 14:44:07', '0000-00-00 00:00:00'),
+(67, 'Swahili', 'no', 'no', 'sw', '2019-03-25 14:44:40', '0000-00-00 00:00:00'),
+(68, 'Sundanese', 'no', 'no', 'su', '2019-03-25 14:44:30', '0000-00-00 00:00:00'),
+(70, 'Thai', 'no', 'no', 'th', '2019-03-25 14:45:29', '0000-00-00 00:00:00'),
+(71, 'Tagalog', 'no', 'no', 'tl', '2019-03-25 14:45:00', '0000-00-00 00:00:00'),
+(72, 'Tamil', 'no', 'no', 'ta', '2019-03-25 14:45:09', '0000-00-00 00:00:00'),
+(74, 'Telugu', 'no', 'no', 'te', '2019-03-25 14:45:18', '0000-00-00 00:00:00'),
+(75, 'Turkish', 'no', 'no', 'tr', '2019-03-25 14:45:36', '0000-00-00 00:00:00'),
+(77, 'Uzbek', 'no', 'no', 'uz', '2019-03-25 14:45:56', '0000-00-00 00:00:00'),
+(79, 'Urdu', 'no', 'no', 'ur', '2019-03-25 14:45:47', '0000-00-00 00:00:00'),
+(80, 'Finnish', 'no', 'no', 'fi', '2019-03-25 14:34:34', '0000-00-00 00:00:00'),
+(81, 'French', 'no', 'no', 'fr', '2019-03-25 14:34:46', '0000-00-00 00:00:00'),
+(82, 'Hindi', 'no', 'no', 'hi', '2019-03-25 14:36:19', '0000-00-00 00:00:00'),
+(84, 'Czech', 'no', 'no', 'cs', '2019-03-25 14:31:30', '0000-00-00 00:00:00'),
+(85, 'Swedish', 'no', 'no', 'sv', '2019-03-25 14:44:50', '0000-00-00 00:00:00'),
+(86, 'Scottish', 'no', 'no', 'gd', '2019-03-25 14:43:35', '0000-00-00 00:00:00'),
+(87, 'Estonian', 'no', 'no', 'et', '2019-03-25 14:34:20', '0000-00-00 00:00:00'),
+(88, 'Esperanto', 'no', 'no', 'eo', '2019-03-25 14:34:12', '0000-00-00 00:00:00'),
+(89, 'Javanese', 'no', 'no', 'jv', '2019-03-25 14:37:31', '0000-00-00 00:00:00'),
+(90, 'Japanese', 'no', 'no', 'ja', '2019-03-25 14:37:20', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -672,6 +865,23 @@ INSERT INTO `students` (`student_id`, `student_name`, `student_lname`, `student_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_attendences`
+--
+
+CREATE TABLE `student_attendences` (
+  `id` int(11) NOT NULL,
+  `student_session_id` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `attendence_type_id` int(11) DEFAULT NULL,
+  `remark` varchar(200) NOT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `student_college_css`
 --
 
@@ -693,6 +903,19 @@ INSERT INTO `student_college_css` (`sccss_id`, `student_id`, `college_id`, `cssi
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_doc`
+--
+
+CREATE TABLE `student_doc` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) DEFAULT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `doc` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tenders`
 --
 
@@ -703,6 +926,24 @@ CREATE TABLE `tenders` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `university_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `timetables`
+--
+
+CREATE TABLE `timetables` (
+  `id` int(11) NOT NULL,
+  `teacher_subject_id` int(20) DEFAULT NULL,
+  `day_name` varchar(50) DEFAULT NULL,
+  `start_time` varchar(50) DEFAULT NULL,
+  `end_time` varchar(50) DEFAULT NULL,
+  `room_no` varchar(50) DEFAULT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -737,7 +978,8 @@ CREATE TABLE `universities` (
   `university_address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `university_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `university_domain` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `uni_col_types` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `university_types` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `university_logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_of_established` date NOT NULL,
   `is_active` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -747,10 +989,10 @@ CREATE TABLE `universities` (
 -- Dumping data for table `universities`
 --
 
-INSERT INTO `universities` (`university_id`, `university_name`, `university_address`, `university_email`, `university_domain`, `uni_col_types`, `date_of_established`, `is_active`, `created_at`) VALUES
-(1, 'Vikram University', 'Ujjain', 'vikram@gmail.com', 'vikramuniv.ac.in', '1', '1988-01-01', '1', '2019-11-19 14:31:03'),
-(2, 'Birla Institute of Technology', 'Mesra', 'bitmesra@gmail.com', 'bitmesra.ac.in', '2', '0000-00-00', '1', '2019-11-21 14:46:12'),
-(3, 'Sikkim Manipal University', 'Sikkim', 'smu@gmail.com', 'smu.edu.in', '1', '0000-00-00', '1', '2019-11-21 14:47:51');
+INSERT INTO `universities` (`university_id`, `university_name`, `university_address`, `university_email`, `university_domain`, `university_types`, `university_logo`, `date_of_established`, `is_active`, `created_at`) VALUES
+(1, 'Vikram University', 'Ujjain', 'vikram@gmail.com', 'vikramuniv.ac.in', '1', 'vikram.jpg', '1988-01-01', '1', '2019-11-19 14:31:03'),
+(2, 'Birla Institute of Technology', 'Mesra', 'bitmesra@gmail.com', 'bitmesra.ac.in', '2', '', '0000-00-00', '1', '2019-11-21 14:46:12'),
+(3, 'Sikkim Manipal University', 'Sikkim', 'smu@gmail.com', 'smu.edu.in', '1', '', '0000-00-00', '1', '2019-11-21 14:47:51');
 
 -- --------------------------------------------------------
 
@@ -770,7 +1012,7 @@ CREATE TABLE `university_types` (
 INSERT INTO `university_types` (`id`, `type`) VALUES
 (1, 'GOVT'),
 (2, 'PRIVATE'),
-(3, 'State');
+(3, 'STATE');
 
 -- --------------------------------------------------------
 
@@ -795,6 +1037,62 @@ INSERT INTO `univ_roles` (`univ_role_id`, `univ_id`, `role_id`) VALUES
 (4, '1', '4'),
 (5, '1', '5');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userlog`
+--
+
+CREATE TABLE `userlog` (
+  `id` int(11) NOT NULL,
+  `user` varchar(100) DEFAULT NULL,
+  `role` varchar(100) DEFAULT NULL,
+  `ipaddress` varchar(100) DEFAULT NULL,
+  `user_agent` varchar(500) DEFAULT NULL,
+  `login_datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `userlog`
+--
+
+INSERT INTO `userlog` (`id`, `user`, `role`, `ipaddress`, `user_agent`, `login_datetime`) VALUES
+(1, 'dollorinfotech@gmail.com', 'Super Admin', '::1', 'Chrome 77.0.3865.120, Windows 10', '2019-10-23 09:51:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `childs` text NOT NULL,
+  `role` varchar(30) NOT NULL,
+  `verification_code` varchar(200) NOT NULL,
+  `is_active` varchar(255) DEFAULT 'yes',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_authentication`
+--
+
+CREATE TABLE `users_authentication` (
+  `id` int(11) NOT NULL,
+  `users_id` int(11) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `expired_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexes for dumped tables
 --
@@ -812,6 +1110,12 @@ ALTER TABLE `branches`
   ADD PRIMARY KEY (`branch_id`);
 
 --
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `colleges`
 --
 ALTER TABLE `colleges`
@@ -827,7 +1131,7 @@ ALTER TABLE `college_affiliations`
 -- Indexes for table `college_courses`
 --
 ALTER TABLE `college_courses`
-  ADD PRIMARY KEY (`college_courses_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `college_types`
@@ -866,10 +1170,43 @@ ALTER TABLE `departments`
   ADD PRIMARY KEY (`department_id`);
 
 --
+-- Indexes for table `exams`
+--
+ALTER TABLE `exams`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `exam_results`
+--
+ALTER TABLE `exam_results`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `exam_schedule_id` (`exam_schedule_id`),
+  ADD KEY `student_id` (`student_id`);
+
+--
+-- Indexes for table `exam_schedules`
+--
+ALTER TABLE `exam_schedules`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `teacher_subject_id` (`teacher_subject_id`);
+
+--
 -- Indexes for table `faculties`
 --
 ALTER TABLE `faculties`
   ADD PRIMARY KEY (`faculty_id`);
+
+--
+-- Indexes for table `grades`
+--
+ALTER TABLE `grades`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `languages`
+--
+ALTER TABLE `languages`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `roles`
@@ -902,16 +1239,36 @@ ALTER TABLE `students`
   ADD PRIMARY KEY (`student_id`);
 
 --
+-- Indexes for table `student_attendences`
+--
+ALTER TABLE `student_attendences`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_session_id` (`student_session_id`),
+  ADD KEY `attendence_type_id` (`attendence_type_id`);
+
+--
 -- Indexes for table `student_college_css`
 --
 ALTER TABLE `student_college_css`
   ADD PRIMARY KEY (`sccss_id`);
 
 --
+-- Indexes for table `student_doc`
+--
+ALTER TABLE `student_doc`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tenders`
 --
 ALTER TABLE `tenders`
   ADD PRIMARY KEY (`tender_id`);
+
+--
+-- Indexes for table `timetables`
+--
+ALTER TABLE `timetables`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `univeristy_affiliations`
@@ -938,6 +1295,24 @@ ALTER TABLE `univ_roles`
   ADD PRIMARY KEY (`univ_role_id`);
 
 --
+-- Indexes for table `userlog`
+--
+ALTER TABLE `userlog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users_authentication`
+--
+ALTER TABLE `users_authentication`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -945,13 +1320,19 @@ ALTER TABLE `univ_roles`
 -- AUTO_INCREMENT for table `academic_ranks`
 --
 ALTER TABLE `academic_ranks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `branches`
 --
 ALTER TABLE `branches`
   MODIFY `branch_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `colleges`
@@ -969,13 +1350,13 @@ ALTER TABLE `college_affiliations`
 -- AUTO_INCREMENT for table `college_courses`
 --
 ALTER TABLE `college_courses`
-  MODIFY `college_courses_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `college_types`
 --
 ALTER TABLE `college_types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -1008,10 +1389,40 @@ ALTER TABLE `departments`
   MODIFY `department_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `exams`
+--
+ALTER TABLE `exams`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `exam_results`
+--
+ALTER TABLE `exam_results`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `exam_schedules`
+--
+ALTER TABLE `exam_schedules`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `faculties`
 --
 ALTER TABLE `faculties`
   MODIFY `faculty_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `grades`
+--
+ALTER TABLE `grades`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `languages`
+--
+ALTER TABLE `languages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -1044,16 +1455,34 @@ ALTER TABLE `students`
   MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `student_attendences`
+--
+ALTER TABLE `student_attendences`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `student_college_css`
 --
 ALTER TABLE `student_college_css`
   MODIFY `sccss_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `student_doc`
+--
+ALTER TABLE `student_doc`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tenders`
 --
 ALTER TABLE `tenders`
   MODIFY `tender_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `timetables`
+--
+ALTER TABLE `timetables`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `univeristy_affiliations`
@@ -1078,6 +1507,24 @@ ALTER TABLE `university_types`
 --
 ALTER TABLE `univ_roles`
   MODIFY `univ_role_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `userlog`
+--
+ALTER TABLE `userlog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users_authentication`
+--
+ALTER TABLE `users_authentication`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
