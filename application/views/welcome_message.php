@@ -23,6 +23,9 @@
     <link href="<?php echo base_url('assets/frontend/'); ?>css/style.css" rel="stylesheet" />
     <!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
     <link href="<?php echo base_url('assets/frontend/'); ?>css/style-mob.css" rel="stylesheet" />
+	
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/frontend/'); ?>css/breakingNews.css"/>
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -368,39 +371,22 @@
         <div class="search-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="search-form">
-                            <form>
-                                <div class="sf-type">
-                                    <div class="sf-input">
-                                        <input type="text" id="sf-box" placeholder="Search course and discount courses">
-                                    </div>
-                                    <div class="sf-list">
-                                        <ul>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Accounting/Finance</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">civil engineering</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Art/Design</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Marine Engineering</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Business Management</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Journalism/Writing</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Physical Education</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Political Science</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Sciences</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Statistics</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Web Design/Development</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">SEO</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Google Business</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Graphics Design</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Networking Courses</a></li>
-                                            <li><a href="<?php echo base_url('assets/frontend/'); ?>course-details.html">Information technology</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="sf-submit">
-                                    <input type="submit" value="Search Course">
-                                </div>
-                            </form>
-                        </div>
+                    <div class="col-md-12">						
+						<div class="breakingNews bn-bordernone bn-darkred" id="bn7">
+							<div class="bn-title" style="width: auto;"><h2 style="display: inline-block;">Latest News</h2><span></span></div>
+							<ul style="left: 174px;">
+								<li style="display: block; top: 0px;"><a href="#"><span>CNN News</span> - Mauris interdum elit non sapien imperdiet, ac dapibus mi maximus</a></li>
+								<li style="top: -60px; display: block;"><a href="#"><span>BBC News</span> - Nullam sit amet nisl ex</a></li>
+								<li style="top: -60px; display: block;"><a href="#"><span>CNN News</span> - Cras lorem augue, facilisis a commodo in, facilisis finibus libero vel ultrices.</a></li>
+								<li style="top: -60px; display: block;"><a href="#"><span>AOL News</span> - Maecenas imperdiet ante vitae neque facilisis cursus</a></li>
+								<li style="top: -60px; display: block;"><a href="#"><span>YAHOO News</span> - Maecenas libero ipsum, placerat in mattis vel, tincidunt quis est.</a></li>
+								<li style="top: 60px; display: block;"><a href="#"><span>BBC News</span> - Curabitur tortor libero, vehicula sagittis luctus sed, lobortis sed arcu</a></li>
+							</ul>
+							<div class="bn-navi">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
@@ -977,7 +963,7 @@
                 <div class="col-md-4">
                     <div class="bot-gal h-vid ho-event-mob-bot-sp">
                         <h4>Video Gallery</h4>
-                        <iframe src="<?php echo base_url('assets/frontend/'); ?>https://www.youtube.com/embed/2WqFtiR4-F4?autoplay=0&amp;showinfo=0&amp;controls=0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/2WqFtiR4-F4?autoplay=0&amp;showinfo=0&amp;controls=0" allowfullscreen></iframe>
                         <h5>Maecenas sollicitudin lacinia</h5>
                         <p>Maecenas finibus neque a tellus auctor mattis. Aliquam tempor varius ornare. Maecenas dignissim leo leo, nec posuere purus finibus vitae.</p>
                         <p>Quisque vitae neque at tellus malesuada convallis. Phasellus in lectus vitae ex euismod interdum non a lorem. Nulla bibendum. Curabitur mi odio, tempus quis risus cursus.</p>
@@ -1332,6 +1318,8 @@
     </section>
 
     <!--Import jQuery before materialize.js-->
+	<script src="<?php echo base_url('assets/frontend/'); ?>js/jQuery.js"></script>
+	<script src="<?php echo base_url('assets/frontend/'); ?>js/breakingNews.js"></script>
     <script src="<?php echo base_url('assets/frontend/'); ?>js/main.min.js"></script>
     <script src="<?php echo base_url('assets/frontend/'); ?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url('assets/frontend/'); ?>js/materialize.min.js"></script>
