@@ -12,25 +12,25 @@
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
 	<!-- icons -->
-	<link href="fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="fonts/material-design-icons/material-icon.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>fonts/material-design-icons/material-icon.css" rel="stylesheet" type="text/css" />
 	<!--bootstrap -->
-	<link href="<?php echo base_url('assets/backend/'); ?>/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url('assets/backend/'); ?>/plugins/summernote/summernote.css" rel="stylesheet">
+	<link href="<?php echo base_url('assets/backend/'); ?>plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>plugins/summernote/summernote.css" rel="stylesheet">
 	<!-- Material Design Lite CSS -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/backend/'); ?>/plugins/material/material.min.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/backend/'); ?>/css/material_style.css">
+	<link rel="stylesheet" href="<?php echo base_url('assets/backend/'); ?>plugins/material/material.min.css">
+	<link rel="stylesheet" href="<?php echo base_url('assets/backend/'); ?>css/material_style.css">
 	<!-- inbox style -->
-	<link href="<?php echo base_url('assets/backend/'); ?>/css/pages/inbox.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>css/pages/inbox.min.css" rel="stylesheet" type="text/css" />
 	<!-- Theme Styles -->
-	<link href="<?php echo base_url('assets/backend/'); ?>/css/theme/light/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
-	<link href="<?php echo base_url('assets/backend/'); ?>/css/plugins.min.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url('assets/backend/'); ?>/css/theme/light/style.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url('assets/backend/'); ?>/css/responsive.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url('assets/backend/'); ?>/css/theme/light/theme-color.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>css/theme/light/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>css/plugins.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>css/theme/light/style.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url('assets/backend/'); ?>css/theme/light/theme-color.css" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
-	<link rel="shortcut icon" href="<?php echo base_url('assets/backend/'); ?>/img/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo base_url('assets/backend/'); ?>img/favicon.ico" />
 </head>
 <!-- END HEAD -->
 
@@ -73,24 +73,24 @@
 						<!-- start language menu -->
 						<li class="dropdown language-switch">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img
-									src="<?php echo base_url('assets/backend/'); ?>/img/flags/gb.png" class="position-left" alt=""> English <span
+									src="<?php echo base_url('assets/backend/'); ?>img/flags/gb.png" class="position-left" alt=""> English <span
 									class="fa fa-angle-down"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li>
-									<a class="deutsch"><img src="<?php echo base_url('assets/backend/'); ?>/img/flags/de.png" alt=""> Deutsch</a>
+									<a class="deutsch"><img src="<?php echo base_url('assets/backend/'); ?>img/flags/de.png" alt=""> Deutsch</a>
 								</li>
 								<li>
-									<a class="ukrainian"><img src="<?php echo base_url('assets/backend/'); ?>/img/flags/ua.png" alt=""> Українська</a>
+									<a class="ukrainian"><img src="<?php echo base_url('assets/backend/'); ?>img/flags/ua.png" alt=""> Українська</a>
 								</li>
 								<li>
-									<a class="english"><img src="<?php echo base_url('assets/backend/'); ?>/img/flags/gb.png" alt=""> English</a>
+									<a class="english"><img src="<?php echo base_url('assets/backend/'); ?>img/flags/gb.png" alt=""> English</a>
 								</li>
 								<li>
-									<a class="espana"><img src="<?php echo base_url('assets/backend/'); ?>/img/flags/es.png" alt=""> España</a>
+									<a class="espana"><img src="<?php echo base_url('assets/backend/'); ?>img/flags/es.png" alt=""> España</a>
 								</li>
 								<li>
-									<a class="russian"><img src="<?php echo base_url('assets/backend/'); ?>/img/flags/ru.png" alt=""> Русский</a>
+									<a class="russian"><img src="<?php echo base_url('assets/backend/'); ?>img/flags/ru.png" alt=""> Русский</a>
 								</li>
 							</ul>
 						</li>
@@ -186,7 +186,7 @@
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof2.jpg" class="img-circle" alt="">
+													<img src="<?php echo base_url('assets/backend/'); ?>img/prof/prof2.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Sarah Smith </span>
@@ -198,7 +198,7 @@
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof3.jpg" class="img-circle" alt="">
+													<img src="<?php echo base_url('assets/backend/'); ?>img/prof/prof3.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> John Deo </span>
@@ -211,7 +211,7 @@
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof1.jpg" class="img-circle" alt="">
+													<img src="<?php echo base_url('assets/backend/'); ?>img/prof/prof1.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Rajesh </span>
@@ -223,7 +223,7 @@
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof8.jpg" class="img-circle" alt="">
+													<img src="<?php echo base_url('assets/backend/'); ?>img/prof/prof8.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Lina Smith </span>
@@ -235,7 +235,7 @@
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof5.jpg" class="img-circle" alt="">
+													<img src="<?php echo base_url('assets/backend/'); ?>img/prof/prof5.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Jacob Ryan </span>
@@ -256,7 +256,7 @@
 						<li class="dropdown dropdown-user">
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
 								data-close-others="true">
-								<img alt="" class="img-circle " src="<?php echo base_url('assets/backend/'); ?>/img/dp.jpg" />
+								<img alt="" class="img-circle " src="<?php echo base_url('assets/backend/'); ?>img/dp.jpg" />
 								<span class="username username-hide-on-mobile"> Kiran </span>
 								<i class="fa fa-angle-down"></i>
 							</a>
@@ -380,7 +380,7 @@
 							<li class="sidebar-user-panel">
 								<div class="user-panel">
 									<div class="pull-left image">
-										<img src="<?php echo base_url('assets/backend/'); ?>/img/dp.jpg" class="img-circle user-img-circle"
+										<img src="<?php echo base_url('assets/backend/'); ?>img/dp.jpg" class="img-circle user-img-circle"
 											alt="User Image" />
 									</div>
 									<div class="pull-left info">
@@ -1211,7 +1211,7 @@
 						<div class="col-lg-3 col-md-6 col-12 col-sm-6">
 							<div class="blogThumb">
 								<div class="thumb-center"><img class="img-responsive" alt="user"
-										src="<?php echo base_url('assets/backend/'); ?>/img/course/course1.jpg"></div>
+										src="<?php echo base_url('assets/backend/'); ?>img/course/course1.jpg"></div>
 								<div class="course-box">
 									<h4>PHP Development Course</h4>
 									<div class="text-muted"><span class="m-r-10">April 23</span>
@@ -1229,7 +1229,7 @@
 						<div class="col-lg-3 col-md-6 col-12 col-sm-6 ">
 							<div class="blogThumb">
 								<div class="thumb-center"><img class="img-responsive" alt="user"
-										src="<?php echo base_url('assets/backend/'); ?>/img/course/course2.jpg"></div>
+										src="<?php echo base_url('assets/backend/'); ?>img/course/course2.jpg"></div>
 								<div class="course-box">
 									<h4>PHP Development Course</h4>
 									<div class="text-muted"><span class="m-r-10">April 23</span>
@@ -1247,7 +1247,7 @@
 						<div class="col-lg-3 col-md-6 col-12 col-sm-6">
 							<div class="blogThumb">
 								<div class="thumb-center"><img class="img-responsive" alt="user"
-										src="<?php echo base_url('assets/backend/'); ?>/img/course/course3.jpg"></div>
+										src="<?php echo base_url('assets/backend/'); ?>img/course/course3.jpg"></div>
 								<div class="course-box">
 									<h4>PHP Development Course</h4>
 									<div class="text-muted"><span class="m-r-10">April 23</span>
@@ -1265,7 +1265,7 @@
 						<div class="col-lg-3 col-md-6 col-12 col-sm-6">
 							<div class="blogThumb">
 								<div class="thumb-center"><img class="img-responsive" alt="user"
-										src="<?php echo base_url('assets/backend/'); ?>/img/course/course4.jpg"></div>
+										src="<?php echo base_url('assets/backend/'); ?>img/course/course4.jpg"></div>
 								<div class="course-box">
 									<h4>PHP Development Course</h4>
 									<div class="text-muted"><span class="m-r-10">April 23</span>
@@ -1371,7 +1371,7 @@
 									<ul class="feedBody">
 										<li class="active-feed">
 											<div class="feed-user-img">
-												<img src="<?php echo base_url('assets/backend/'); ?>/img/std/std1.jpg" class="img-radius "
+												<img src="<?php echo base_url('assets/backend/'); ?>img/std/std1.jpg" class="img-radius "
 													alt="User-Profile-Image">
 											</div>
 											<h6>
@@ -1384,7 +1384,7 @@
 										</li>
 										<li class="diactive-feed">
 											<div class="feed-user-img">
-												<img src="<?php echo base_url('assets/backend/'); ?>/img/std/std2.jpg" class="img-radius "
+												<img src="<?php echo base_url('assets/backend/'); ?>img/std/std2.jpg" class="img-radius "
 													alt="User-Profile-Image">
 											</div>
 											<h6>
@@ -1398,7 +1398,7 @@
 										</li>
 										<li class="diactive-feed">
 											<div class="feed-user-img">
-												<img src="<?php echo base_url('assets/backend/'); ?>/img/std/std3.jpg" class="img-radius "
+												<img src="<?php echo base_url('assets/backend/'); ?>img/std/std3.jpg" class="img-radius "
 													alt="User-Profile-Image">
 											</div>
 											<h6>
@@ -1411,7 +1411,7 @@
 										</li>
 										<li class="active-feed">
 											<div class="feed-user-img">
-												<img src="<?php echo base_url('assets/backend/'); ?>/img/std/std4.jpg" class="img-radius "
+												<img src="<?php echo base_url('assets/backend/'); ?>img/std/std4.jpg" class="img-radius "
 													alt="User-Profile-Image">
 											</div>
 											<h6>
@@ -1424,7 +1424,7 @@
 										</li>
 										<li class="active-feed">
 											<div class="feed-user-img">
-												<img src="<?php echo base_url('assets/backend/'); ?>/img/std/std5.jpg" class="img-radius "
+												<img src="<?php echo base_url('assets/backend/'); ?>img/std/std5.jpg" class="img-radius "
 													alt="User-Profile-Image">
 											</div>
 											<h6>
@@ -1437,7 +1437,7 @@
 										</li>
 										<li class="diactive-feed">
 											<div class="feed-user-img">
-												<img src="<?php echo base_url('assets/backend/'); ?>/img/std/std6.jpg" class="img-radius "
+												<img src="<?php echo base_url('assets/backend/'); ?>img/std/std6.jpg" class="img-radius "
 													alt="User-Profile-Image">
 											</div>
 											<h6>
@@ -1830,7 +1830,7 @@
 										<h5 class="list-heading">Online</h5>
 									</div>
 									<ul class="media-list list-items">
-										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof3.jpg"
+										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof3.jpg"
 												width="35" height="35" alt="...">
 											<i class="online dot"></i>
 											<div class="media-body">
@@ -1841,7 +1841,7 @@
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-success">5</span>
-											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof1.jpg"
+											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof1.jpg"
 												width="35" height="35" alt="...">
 											<i class="busy dot"></i>
 											<div class="media-body">
@@ -1849,7 +1849,7 @@
 												<div class="media-heading-sub">Director</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof5.jpg"
+										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof5.jpg"
 												width="35" height="35" alt="...">
 											<i class="away dot"></i>
 											<div class="media-body">
@@ -1860,7 +1860,7 @@
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-danger">8</span>
-											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof4.jpg"
+											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof4.jpg"
 												width="35" height="35" alt="...">
 											<i class="online dot"></i>
 											<div class="media-body">
@@ -1868,7 +1868,7 @@
 												<div class="media-heading-sub">CEO</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof2.jpg"
+										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof2.jpg"
 												width="35" height="35" alt="...">
 											<i class="busy dot"></i>
 											<div class="media-body">
@@ -1876,7 +1876,7 @@
 												<div class="media-heading-sub">Anaesthetics</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof7.jpg"
+										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof7.jpg"
 												width="35" height="35" alt="...">
 											<i class="online dot"></i>
 											<div class="media-body">
@@ -1892,7 +1892,7 @@
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-warning">4</span>
-											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof6.jpg"
+											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof6.jpg"
 												width="35" height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1901,7 +1901,7 @@
 												<div class="media-heading-small">Last seen 01:20 AM</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof8.jpg"
+										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof8.jpg"
 												width="35" height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1913,7 +1913,7 @@
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-success">9</span>
-											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof9.jpg"
+											</div> <img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof9.jpg"
 												width="35" height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1922,7 +1922,7 @@
 												<div class="media-heading-small">Last seen 3:31 PM</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>/img/prof/prof10.jpg"
+										<li class="media"><img class="media-object" src="<?php echo base_url('assets/backend/'); ?>img/prof/prof10.jpg"
 												width="35" height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -2090,28 +2090,28 @@
 		<!-- end footer -->
 	</div>
 	<!-- start js include path -->
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/jquery/jquery.min.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/popper/popper.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/jquery-blockui/jquery.blockui.min.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/jquery/jquery.min.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/popper/popper.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/jquery-blockui/jquery.blockui.min.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 	<!-- bootstrap -->
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/sparkline/jquery.sparkline.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/js/pages/sparkline/sparkline-data.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/sparkline/jquery.sparkline.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>js/pages/sparkline/sparkline-data.js"></script>
 	<!-- Common js-->
-	<script src="<?php echo base_url('assets/backend/'); ?>/js/app.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/js/layout.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/js/theme-color.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>js/app.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>js/layout.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>js/theme-color.js"></script>
 	<!-- material -->
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/material/material.min.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/material/material.min.js"></script>
 	<!-- chart js -->
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/chart-js/Chart.bundle.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/plugins/chart-js/utils.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/js/pages/chart/chartjs/home-data.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/chart-js/Chart.bundle.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/chart-js/utils.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>js/pages/chart/chartjs/home-data.js"></script>
 	<!-- summernote -->
-	<script src="../	="<?php echo base_url('assets/backend/'); ?>/plugins/summernote/summernote.js"></script>
-	<script src="<?php echo base_url('assets/backend/'); ?>/js/pages/summernote/summernote-data.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>plugins/summernote/summernote.js"></script>
+	<script src="<?php echo base_url('assets/backend/'); ?>js/pages/summernote/summernote-data.js"></script>
 	<!-- end js include path -->
 </body>
 
