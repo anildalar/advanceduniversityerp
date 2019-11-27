@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 26, 2019 at 01:58 PM
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 27, 2019 at 07:31 AM
 -- Server version: 10.1.37-MariaDB
--- PHP Version: 7.1.33
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -50,6 +50,48 @@ INSERT INTO `academic_ranks` (`id`, `rank_name`, `rank_order`, `country_id`) VAL
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `books`
+--
+
+CREATE TABLE `books` (
+  `id` int(11) NOT NULL,
+  `book_title` varchar(100) NOT NULL,
+  `book_no` varchar(50) NOT NULL,
+  `isbn_no` varchar(100) NOT NULL,
+  `subject` varchar(100) DEFAULT NULL,
+  `rack_no` varchar(100) NOT NULL,
+  `publish` varchar(100) DEFAULT NULL,
+  `author` varchar(100) DEFAULT NULL,
+  `qty` int(11) DEFAULT NULL,
+  `perunitcost` float(10,2) DEFAULT NULL,
+  `postdate` date DEFAULT NULL,
+  `description` text,
+  `available` varchar(10) DEFAULT 'yes',
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `book_issues`
+--
+
+CREATE TABLE `book_issues` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `book_id` int(11) DEFAULT NULL,
+  `return_date` date DEFAULT NULL,
+  `issue_date` date DEFAULT NULL,
+  `is_returned` int(11) DEFAULT '0',
+  `member_id` int(11) DEFAULT NULL,
+  `is_active` varchar(10) NOT NULL DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `branches`
 --
 
@@ -81,6 +123,42 @@ CREATE TABLE `categories` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `certificates`
+--
+
+CREATE TABLE `certificates` (
+  `id` int(11) NOT NULL,
+  `certificate_name` varchar(100) NOT NULL,
+  `certificate_text` text NOT NULL,
+  `left_header` varchar(100) NOT NULL,
+  `center_header` varchar(100) NOT NULL,
+  `right_header` varchar(100) NOT NULL,
+  `left_footer` varchar(100) NOT NULL,
+  `right_footer` varchar(100) NOT NULL,
+  `center_footer` varchar(100) NOT NULL,
+  `background_image` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_for` tinyint(1) NOT NULL COMMENT '1 = staff, 2 = students',
+  `status` tinyint(1) NOT NULL,
+  `header_height` int(11) NOT NULL,
+  `content_height` int(11) NOT NULL,
+  `footer_height` int(11) NOT NULL,
+  `content_width` int(11) NOT NULL,
+  `enable_student_image` tinyint(1) NOT NULL COMMENT '0=no,1=yes',
+  `enable_image_height` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `certificates`
+--
+
+INSERT INTO `certificates` (`id`, `certificate_name`, `certificate_text`, `left_header`, `center_header`, `right_header`, `left_footer`, `right_footer`, `center_footer`, `background_image`, `created_at`, `updated_at`, `created_for`, `status`, `header_height`, `content_height`, `footer_height`, `content_width`, `enable_student_image`, `enable_image_height`) VALUES
+(1, 'Sample Transfer Certificate', 'This is certify that <b>[name]</b> has born on [dob]  <br> and have following details [present_address] [guardian] [created_at] [admission_no] [roll_no] [class] [section] [gender] [admission_date] [category] [cast] [father_name] [mother_name] [religion] [email] [phone] .<br>We wish best of luck for future endeavors.', 'Reff. No.......................', '', 'Date: ___/____/_______', '.................................<br>Authority Sign', '.................................<br>Principal Sign', '.................................<br>Class Teacher Sign', 'sampletc12.png', '2018-09-05 19:47:33', '0000-00-00 00:00:00', 2, 1, 360, 400, 480, 810, 1, 230);
 
 -- --------------------------------------------------------
 
@@ -156,6 +234,40 @@ CREATE TABLE `college_types` (
 INSERT INTO `college_types` (`id`, `type`) VALUES
 (1, 'GOVT'),
 (2, 'PRIVATE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaint`
+--
+
+CREATE TABLE `complaint` (
+  `id` int(11) NOT NULL,
+  `complaint_type` varchar(15) NOT NULL,
+  `source` varchar(15) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `contact` varchar(15) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `date` date NOT NULL,
+  `description` text NOT NULL,
+  `action_taken` varchar(200) NOT NULL,
+  `assigned` varchar(50) NOT NULL,
+  `note` text NOT NULL,
+  `image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaint_type`
+--
+
+CREATE TABLE `complaint_type` (
+  `id` int(11) NOT NULL,
+  `complaint_type` varchar(100) NOT NULL,
+  `description` mediumtext NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -543,6 +655,86 @@ INSERT INTO `departments` (`department_id`, `department_name`, `department_descr
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `email_config`
+--
+
+CREATE TABLE `email_config` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `email_type` varchar(100) DEFAULT NULL,
+  `smtp_server` varchar(100) DEFAULT NULL,
+  `smtp_port` varchar(100) DEFAULT NULL,
+  `smtp_username` varchar(100) DEFAULT NULL,
+  `smtp_password` varchar(100) DEFAULT NULL,
+  `ssl_tls` varchar(100) DEFAULT NULL,
+  `is_active` varchar(10) NOT NULL DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `email_config`
+--
+
+INSERT INTO `email_config` (`id`, `email_type`, `smtp_server`, `smtp_port`, `smtp_username`, `smtp_password`, `ssl_tls`, `is_active`, `created_at`) VALUES
+(1, 'sendmail', '', '', '', '', '', '', '2017-12-04 22:33:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry`
+--
+
+CREATE TABLE `enquiry` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `contact` varchar(20) NOT NULL,
+  `address` mediumtext NOT NULL,
+  `reference` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `follow_up_date` date NOT NULL,
+  `note` mediumtext NOT NULL,
+  `source` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `assigned` varchar(100) NOT NULL,
+  `class` int(11) NOT NULL,
+  `no_of_child` varchar(11) DEFAULT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry_type`
+--
+
+CREATE TABLE `enquiry_type` (
+  `id` int(11) NOT NULL,
+  `enquiry_type` varchar(100) NOT NULL,
+  `description` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `event_title` varchar(200) NOT NULL,
+  `event_description` varchar(300) NOT NULL,
+  `start_date` datetime NOT NULL,
+  `end_date` datetime NOT NULL,
+  `event_type` varchar(100) NOT NULL,
+  `event_color` varchar(200) NOT NULL,
+  `event_for` varchar(100) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `is_active` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `exams`
 --
 
@@ -620,6 +812,230 @@ CREATE TABLE `faculties` (
 INSERT INTO `faculties` (`faculty_id`, `faculty_name`, `faculty_designation`, `faculty_doj`, `created_at`, `college_id`, `university_id`) VALUES
 (1, 'Anil Dollor', 'Asst. Proffesor', '2019-03-01', '2019-11-21 09:34:33', '1', '1'),
 (2, 'Surendra Panday Sir', 'Proffessor', '2019-11-01', '2019-11-21 09:38:38', '', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `follow_up`
+--
+
+CREATE TABLE `follow_up` (
+  `id` int(11) NOT NULL,
+  `enquiry_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `next_date` date NOT NULL,
+  `response` text NOT NULL,
+  `note` text NOT NULL,
+  `followup_by` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_media_gallery`
+--
+
+CREATE TABLE `front_cms_media_gallery` (
+  `id` int(11) NOT NULL,
+  `image` varchar(300) DEFAULT NULL,
+  `thumb_path` varchar(300) DEFAULT NULL,
+  `dir_path` varchar(300) DEFAULT NULL,
+  `img_name` varchar(300) DEFAULT NULL,
+  `thumb_name` varchar(300) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `file_type` varchar(100) NOT NULL,
+  `file_size` varchar(100) NOT NULL,
+  `vid_url` mediumtext NOT NULL,
+  `vid_title` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_menus`
+--
+
+CREATE TABLE `front_cms_menus` (
+  `id` int(11) NOT NULL,
+  `menu` varchar(100) DEFAULT NULL,
+  `slug` varchar(200) DEFAULT NULL,
+  `description` mediumtext,
+  `open_new_tab` int(10) NOT NULL DEFAULT '0',
+  `ext_url` mediumtext NOT NULL,
+  `ext_url_link` mediumtext NOT NULL,
+  `publish` int(11) NOT NULL DEFAULT '0',
+  `content_type` varchar(10) NOT NULL DEFAULT 'manual',
+  `is_active` varchar(10) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `front_cms_menus`
+--
+
+INSERT INTO `front_cms_menus` (`id`, `menu`, `slug`, `description`, `open_new_tab`, `ext_url`, `ext_url_link`, `publish`, `content_type`, `is_active`, `created_at`) VALUES
+(1, 'Main Menu', 'main-menu', 'Main menu', 0, '', '', 0, 'default', 'no', '2018-04-20 14:54:49'),
+(2, 'Bottom Menu', 'bottom-menu', 'Bottom Menu', 0, '', '', 0, 'default', 'no', '2018-04-20 14:54:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_menu_items`
+--
+
+CREATE TABLE `front_cms_menu_items` (
+  `id` int(11) NOT NULL,
+  `menu_id` int(11) NOT NULL,
+  `menu` varchar(100) DEFAULT NULL,
+  `page_id` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL,
+  `ext_url` mediumtext,
+  `open_new_tab` int(11) DEFAULT '0',
+  `ext_url_link` mediumtext,
+  `slug` varchar(200) DEFAULT NULL,
+  `weight` int(11) DEFAULT NULL,
+  `publish` int(11) NOT NULL DEFAULT '0',
+  `description` mediumtext,
+  `is_active` varchar(10) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_pages`
+--
+
+CREATE TABLE `front_cms_pages` (
+  `id` int(11) NOT NULL,
+  `page_type` varchar(10) NOT NULL DEFAULT 'manual',
+  `is_homepage` int(1) DEFAULT '0',
+  `title` varchar(250) DEFAULT NULL,
+  `url` varchar(250) DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `slug` varchar(200) DEFAULT NULL,
+  `meta_title` mediumtext,
+  `meta_description` mediumtext,
+  `meta_keyword` mediumtext,
+  `feature_image` varchar(200) NOT NULL,
+  `description` longtext,
+  `publish_date` date NOT NULL,
+  `publish` int(10) DEFAULT '0',
+  `sidebar` int(10) DEFAULT '0',
+  `is_active` varchar(10) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `front_cms_pages`
+--
+
+INSERT INTO `front_cms_pages` (`id`, `page_type`, `is_homepage`, `title`, `url`, `type`, `slug`, `meta_title`, `meta_description`, `meta_keyword`, `feature_image`, `description`, `publish_date`, `publish`, `sidebar`, `is_active`, `created_at`) VALUES
+(1, 'default', 1, 'Home', 'page/home', 'page', 'home', '', '', '', '', '<p>home page</p>', '0000-00-00', 1, NULL, 'no', '2018-07-11 18:04:33'),
+(2, 'default', 0, 'Complain', 'page/complain', 'page', 'complain', 'Complain form', '                                                                                                                                                                                    complain form                                                                                                                                                                                                                                ', 'complain form', '', '<p>\r\n[form-builder:complain]</p>', '0000-00-00', 1, 1, 'no', '2018-05-09 15:14:34'),
+(54, 'default', 0, '404 page', 'page/404-page', 'page', '404-page', '', '                                ', '', '', '<html>\r\n<head>\r\n <title></title>\r\n</head>\r\n<body>\r\n<p>404 page found</p>\r\n</body>\r\n</html>', '0000-00-00', 0, NULL, 'no', '2018-05-18 14:46:04'),
+(76, 'default', 0, 'Contact us', 'page/contact-us', 'page', 'contact-us', '', '', '', '', '<title></title>\r\n<section class=\"contact\">\r\n<div class=\"container spacet50 spaceb50\">\r\n<div class=\"row\">\r\n<div class=\"col-md-12 col-sm-12\">[form-builder:contact_us]<!--./row--></div>\r\n<!--./col-md-12--></div>\r\n<!--./row--></div>\r\n<!--./container--></section>', '0000-00-00', 0, NULL, 'no', '2018-07-11 18:03:41');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_page_contents`
+--
+
+CREATE TABLE `front_cms_page_contents` (
+  `id` int(11) NOT NULL,
+  `page_id` int(11) DEFAULT NULL,
+  `content_type` varchar(50) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_programs`
+--
+
+CREATE TABLE `front_cms_programs` (
+  `id` int(11) NOT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `url` mediumtext,
+  `title` varchar(200) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `event_start` date DEFAULT NULL,
+  `event_end` date DEFAULT NULL,
+  `event_venue` mediumtext,
+  `description` mediumtext,
+  `is_active` varchar(10) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `meta_title` mediumtext NOT NULL,
+  `meta_description` mediumtext NOT NULL,
+  `meta_keyword` mediumtext NOT NULL,
+  `feature_image` mediumtext NOT NULL,
+  `publish_date` date NOT NULL,
+  `publish` varchar(10) DEFAULT '0',
+  `sidebar` int(10) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_program_photos`
+--
+
+CREATE TABLE `front_cms_program_photos` (
+  `id` int(11) NOT NULL,
+  `program_id` int(11) DEFAULT NULL,
+  `media_gallery_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `front_cms_settings`
+--
+
+CREATE TABLE `front_cms_settings` (
+  `id` int(11) NOT NULL,
+  `theme` varchar(50) DEFAULT NULL,
+  `is_active_rtl` int(10) DEFAULT '0',
+  `is_active_front_cms` int(11) DEFAULT '0',
+  `is_active_sidebar` int(1) DEFAULT '0',
+  `logo` varchar(200) DEFAULT NULL,
+  `contact_us_email` varchar(100) DEFAULT NULL,
+  `complain_form_email` varchar(100) DEFAULT NULL,
+  `sidebar_options` mediumtext NOT NULL,
+  `fb_url` varchar(200) NOT NULL,
+  `twitter_url` varchar(200) NOT NULL,
+  `youtube_url` varchar(200) NOT NULL,
+  `google_plus` varchar(200) NOT NULL,
+  `instagram_url` varchar(200) NOT NULL,
+  `pinterest_url` varchar(200) NOT NULL,
+  `linkedin_url` varchar(200) NOT NULL,
+  `google_analytics` mediumtext,
+  `footer_text` varchar(500) DEFAULT NULL,
+  `fav_icon` varchar(250) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `general_calls`
+--
+
+CREATE TABLE `general_calls` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `contact` varchar(12) NOT NULL,
+  `date` date NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `follow_up_date` date NOT NULL,
+  `call_dureation` varchar(50) NOT NULL,
+  `note` mediumtext NOT NULL,
+  `call_type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -737,6 +1153,118 @@ INSERT INTO `languages` (`id`, `language`, `is_deleted`, `is_active`, `code`, `c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `message` text,
+  `send_mail` varchar(10) DEFAULT '0',
+  `send_sms` varchar(10) DEFAULT '0',
+  `is_group` varchar(10) DEFAULT '0',
+  `is_individual` varchar(10) DEFAULT '0',
+  `is_class` int(10) NOT NULL DEFAULT '0',
+  `group_list` text,
+  `user_list` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notification_roles`
+--
+
+CREATE TABLE `notification_roles` (
+  `id` int(11) NOT NULL,
+  `send_notification_id` int(11) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  `is_active` int(11) DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notification_setting`
+--
+
+CREATE TABLE `notification_setting` (
+  `id` int(11) NOT NULL,
+  `type` varchar(100) DEFAULT NULL,
+  `is_mail` varchar(10) DEFAULT '0',
+  `is_sms` varchar(10) DEFAULT '0',
+  `display_notification` int(11) NOT NULL DEFAULT '0',
+  `is_notification` int(1) DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `notification_setting`
+--
+
+INSERT INTO `notification_setting` (`id`, `type`, `is_mail`, `is_sms`, `display_notification`, `is_notification`, `created_at`) VALUES
+(1, 'student_admission', '1', '0', 0, 0, '2019-04-10 14:27:50'),
+(2, 'exam_result', '1', '0', 1, 0, '2019-04-10 14:27:50'),
+(3, 'fee_submission', '1', '0', 1, 0, '2019-04-10 14:27:50'),
+(4, 'absent_attendence', '1', '0', 1, 0, '2019-04-10 14:27:50'),
+(5, 'login_credential', '1', '0', 0, 0, '2019-04-10 14:27:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment_settings`
+--
+
+CREATE TABLE `payment_settings` (
+  `id` int(11) NOT NULL,
+  `payment_type` varchar(200) NOT NULL,
+  `api_username` varchar(200) DEFAULT NULL,
+  `api_secret_key` varchar(200) NOT NULL,
+  `salt` varchar(200) NOT NULL,
+  `api_publishable_key` varchar(200) NOT NULL,
+  `api_password` varchar(200) DEFAULT NULL,
+  `api_signature` varchar(200) DEFAULT NULL,
+  `api_email` varchar(200) DEFAULT NULL,
+  `paypal_demo` varchar(100) NOT NULL,
+  `account_no` varchar(200) NOT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `payment_settings`
+--
+
+INSERT INTO `payment_settings` (`id`, `payment_type`, `api_username`, `api_secret_key`, `salt`, `api_publishable_key`, `api_password`, `api_signature`, `api_email`, `paypal_demo`, `account_no`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 'paypal', '', '', '', '', '', '', NULL, '', '', 'yes', '2018-07-12 05:26:13', '0000-00-00 00:00:00'),
+(2, 'stripe', NULL, '', '', '', NULL, NULL, NULL, '', '', 'no', '2018-07-12 05:26:26', '0000-00-00 00:00:00'),
+(3, 'payu', NULL, '', '', '', NULL, NULL, NULL, '', '', 'no', '2018-07-12 05:26:35', '0000-00-00 00:00:00'),
+(4, 'ccavenue', NULL, '', '', '', NULL, NULL, NULL, '', '', 'no', '2018-07-12 05:26:45', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `read_notification`
+--
+
+CREATE TABLE `read_notification` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) DEFAULT NULL,
+  `parent_id` int(10) DEFAULT NULL,
+  `staff_id` int(11) DEFAULT NULL,
+  `notification_id` int(11) DEFAULT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roles`
 --
 
@@ -823,6 +1351,28 @@ INSERT INTO `sections` (`sections_id`, `section_name`, `section_type`, `section_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `send_notification`
+--
+
+CREATE TABLE `send_notification` (
+  `id` int(11) NOT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `publish_date` date DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `message` text,
+  `visible_student` varchar(10) NOT NULL DEFAULT 'no',
+  `visible_staff` varchar(10) NOT NULL DEFAULT 'no',
+  `visible_parent` varchar(10) NOT NULL DEFAULT 'no',
+  `created_by` varchar(60) DEFAULT NULL,
+  `created_id` int(11) DEFAULT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sessions`
 --
 
@@ -839,6 +1389,255 @@ INSERT INTO `sessions` (`session_id`, `session_name`) VALUES
 (1, '2018-2019'),
 (2, '2019-2020'),
 (3, '2020-2021');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sms_config`
+--
+
+CREATE TABLE `sms_config` (
+  `id` int(11) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `api_id` varchar(100) NOT NULL,
+  `authkey` varchar(100) NOT NULL,
+  `senderid` varchar(100) NOT NULL,
+  `contact` text,
+  `username` varchar(150) DEFAULT NULL,
+  `url` varchar(150) DEFAULT NULL,
+  `password` varchar(150) DEFAULT NULL,
+  `is_active` varchar(255) DEFAULT 'disabled',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE `staff` (
+  `id` int(11) NOT NULL,
+  `employee_id` varchar(200) NOT NULL,
+  `department` varchar(100) NOT NULL,
+  `designation` varchar(100) NOT NULL,
+  `qualification` varchar(200) NOT NULL,
+  `work_exp` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `surname` varchar(200) NOT NULL,
+  `father_name` varchar(200) NOT NULL,
+  `mother_name` varchar(200) NOT NULL,
+  `contact_no` varchar(200) NOT NULL,
+  `emergency_contact_no` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `dob` date NOT NULL,
+  `marital_status` varchar(100) NOT NULL,
+  `date_of_joining` date NOT NULL,
+  `date_of_leaving` date NOT NULL,
+  `local_address` varchar(300) NOT NULL,
+  `permanent_address` varchar(200) NOT NULL,
+  `note` varchar(200) NOT NULL,
+  `image` varchar(200) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `account_title` varchar(200) NOT NULL,
+  `bank_account_no` varchar(200) NOT NULL,
+  `bank_name` varchar(200) NOT NULL,
+  `ifsc_code` varchar(200) NOT NULL,
+  `bank_branch` varchar(100) NOT NULL,
+  `payscale` varchar(200) NOT NULL,
+  `basic_salary` varchar(200) NOT NULL,
+  `epf_no` varchar(200) NOT NULL,
+  `contract_type` varchar(100) NOT NULL,
+  `shift` varchar(100) NOT NULL,
+  `location` varchar(100) NOT NULL,
+  `facebook` varchar(200) NOT NULL,
+  `twitter` varchar(200) NOT NULL,
+  `linkedin` varchar(200) NOT NULL,
+  `instagram` varchar(200) NOT NULL,
+  `resume` varchar(200) NOT NULL,
+  `joining_letter` varchar(200) NOT NULL,
+  `resignation_letter` varchar(200) NOT NULL,
+  `other_document_name` varchar(200) NOT NULL,
+  `other_document_file` varchar(200) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `verification_code` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`id`, `employee_id`, `department`, `designation`, `qualification`, `work_exp`, `name`, `surname`, `father_name`, `mother_name`, `contact_no`, `emergency_contact_no`, `email`, `dob`, `marital_status`, `date_of_joining`, `date_of_leaving`, `local_address`, `permanent_address`, `note`, `image`, `password`, `gender`, `account_title`, `bank_account_no`, `bank_name`, `ifsc_code`, `bank_branch`, `payscale`, `basic_salary`, `epf_no`, `contract_type`, `shift`, `location`, `facebook`, `twitter`, `linkedin`, `instagram`, `resume`, `joining_letter`, `resignation_letter`, `other_document_name`, `other_document_file`, `user_id`, `is_active`, `verification_code`) VALUES
+(1, '', '', '', '', '', 'Super Admin', '', '', '', '', '', 'dollorinfotech@gmail.com', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '', '', '', '$2y$10$/hyJdHJDjiIWqapfsKCle.pqjZG.5CfqnIbp.T6QSFpupT2IxrCzC', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_attendance`
+--
+
+CREATE TABLE `staff_attendance` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `staff_id` int(11) NOT NULL,
+  `staff_attendance_type_id` int(11) NOT NULL,
+  `remark` varchar(200) NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_attendance_type`
+--
+
+CREATE TABLE `staff_attendance_type` (
+  `id` int(11) NOT NULL,
+  `type` varchar(200) NOT NULL,
+  `key_value` varchar(200) NOT NULL,
+  `is_active` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `staff_attendance_type`
+--
+
+INSERT INTO `staff_attendance_type` (`id`, `type`, `key_value`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 'Present', '<b class=\"text text-success\">P</b>', 'yes', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Late', '<b class=\"text text-warning\">L</b>', 'yes', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'Absent', '<b class=\"text text-danger\">A</b>', 'yes', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'Half Day', '<b class=\"text text-warning\">F</b>', 'yes', '2018-05-07 01:56:16', '0000-00-00 00:00:00'),
+(5, 'Holiday', 'H', 'yes', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_designation`
+--
+
+CREATE TABLE `staff_designation` (
+  `id` int(11) NOT NULL,
+  `designation` varchar(200) NOT NULL,
+  `is_active` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_leave_details`
+--
+
+CREATE TABLE `staff_leave_details` (
+  `id` int(11) NOT NULL,
+  `staff_id` int(11) NOT NULL,
+  `leave_type_id` int(11) NOT NULL,
+  `alloted_leave` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_leave_request`
+--
+
+CREATE TABLE `staff_leave_request` (
+  `id` int(11) NOT NULL,
+  `staff_id` int(11) NOT NULL,
+  `leave_type_id` int(11) NOT NULL,
+  `leave_from` date NOT NULL,
+  `leave_to` date NOT NULL,
+  `leave_days` int(11) NOT NULL,
+  `employee_remark` varchar(200) NOT NULL,
+  `admin_remark` varchar(200) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `applied_by` varchar(200) NOT NULL,
+  `document_file` varchar(200) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_payroll`
+--
+
+CREATE TABLE `staff_payroll` (
+  `id` int(11) NOT NULL,
+  `basic_salary` int(11) NOT NULL,
+  `pay_scale` varchar(200) NOT NULL,
+  `grade` varchar(50) NOT NULL,
+  `is_active` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_payslip`
+--
+
+CREATE TABLE `staff_payslip` (
+  `id` int(11) NOT NULL,
+  `staff_id` int(11) NOT NULL,
+  `basic` int(11) NOT NULL,
+  `total_allowance` int(11) NOT NULL,
+  `total_deduction` int(11) NOT NULL,
+  `leave_deduction` int(11) NOT NULL,
+  `tax` varchar(200) NOT NULL,
+  `net_salary` int(11) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `month` varchar(200) NOT NULL,
+  `year` varchar(200) NOT NULL,
+  `payment_mode` varchar(200) NOT NULL,
+  `payment_date` date NOT NULL,
+  `remark` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_roles`
+--
+
+CREATE TABLE `staff_roles` (
+  `id` int(11) NOT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  `staff_id` int(11) DEFAULT NULL,
+  `is_active` int(11) DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `staff_roles`
+--
+
+INSERT INTO `staff_roles` (`id`, `role_id`, `staff_id`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 7, 1, 0, '2019-10-23 09:43:16', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_timeline`
+--
+
+CREATE TABLE `staff_timeline` (
+  `id` int(11) NOT NULL,
+  `staff_id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `timeline_date` date NOT NULL,
+  `description` varchar(300) NOT NULL,
+  `document` varchar(200) NOT NULL,
+  `status` varchar(200) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -911,6 +1710,22 @@ CREATE TABLE `student_doc` (
   `student_id` int(11) DEFAULT NULL,
   `title` varchar(200) DEFAULT NULL,
   `doc` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subjects`
+--
+
+CREATE TABLE `subjects` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `code` varchar(100) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `is_active` varchar(255) DEFAULT 'no',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1104,6 +1919,18 @@ ALTER TABLE `academic_ranks`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `book_issues`
+--
+ALTER TABLE `book_issues`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `branches`
 --
 ALTER TABLE `branches`
@@ -1113,6 +1940,12 @@ ALTER TABLE `branches`
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `certificates`
+--
+ALTER TABLE `certificates`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1137,6 +1970,18 @@ ALTER TABLE `college_courses`
 -- Indexes for table `college_types`
 --
 ALTER TABLE `college_types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `complaint`
+--
+ALTER TABLE `complaint`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `complaint_type`
+--
+ALTER TABLE `complaint_type`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1170,6 +2015,30 @@ ALTER TABLE `departments`
   ADD PRIMARY KEY (`department_id`);
 
 --
+-- Indexes for table `email_config`
+--
+ALTER TABLE `email_config`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enquiry_type`
+--
+ALTER TABLE `enquiry_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `exams`
 --
 ALTER TABLE `exams`
@@ -1197,6 +2066,68 @@ ALTER TABLE `faculties`
   ADD PRIMARY KEY (`faculty_id`);
 
 --
+-- Indexes for table `follow_up`
+--
+ALTER TABLE `follow_up`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `front_cms_media_gallery`
+--
+ALTER TABLE `front_cms_media_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `front_cms_menus`
+--
+ALTER TABLE `front_cms_menus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `front_cms_menu_items`
+--
+ALTER TABLE `front_cms_menu_items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `front_cms_pages`
+--
+ALTER TABLE `front_cms_pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `front_cms_page_contents`
+--
+ALTER TABLE `front_cms_page_contents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `page_id` (`page_id`);
+
+--
+-- Indexes for table `front_cms_programs`
+--
+ALTER TABLE `front_cms_programs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `front_cms_program_photos`
+--
+ALTER TABLE `front_cms_program_photos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `program_id` (`program_id`);
+
+--
+-- Indexes for table `front_cms_settings`
+--
+ALTER TABLE `front_cms_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `general_calls`
+--
+ALTER TABLE `general_calls`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `grades`
 --
 ALTER TABLE `grades`
@@ -1206,6 +2137,38 @@ ALTER TABLE `grades`
 -- Indexes for table `languages`
 --
 ALTER TABLE `languages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notification_roles`
+--
+ALTER TABLE `notification_roles`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `send_notification_id` (`send_notification_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Indexes for table `notification_setting`
+--
+ALTER TABLE `notification_setting`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `payment_settings`
+--
+ALTER TABLE `payment_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `read_notification`
+--
+ALTER TABLE `read_notification`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1227,10 +2190,85 @@ ALTER TABLE `sections`
   ADD PRIMARY KEY (`sections_id`);
 
 --
+-- Indexes for table `send_notification`
+--
+ALTER TABLE `send_notification`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`session_id`);
+
+--
+-- Indexes for table `sms_config`
+--
+ALTER TABLE `sms_config`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `employee_id` (`employee_id`);
+
+--
+-- Indexes for table `staff_attendance`
+--
+ALTER TABLE `staff_attendance`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_attendance_type`
+--
+ALTER TABLE `staff_attendance_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_designation`
+--
+ALTER TABLE `staff_designation`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_leave_details`
+--
+ALTER TABLE `staff_leave_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_leave_request`
+--
+ALTER TABLE `staff_leave_request`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_payroll`
+--
+ALTER TABLE `staff_payroll`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_payslip`
+--
+ALTER TABLE `staff_payslip`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staff_roles`
+--
+ALTER TABLE `staff_roles`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `role_id` (`role_id`),
+  ADD KEY `staff_id` (`staff_id`);
+
+--
+-- Indexes for table `staff_timeline`
+--
+ALTER TABLE `staff_timeline`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `students`
@@ -1256,6 +2294,12 @@ ALTER TABLE `student_college_css`
 -- Indexes for table `student_doc`
 --
 ALTER TABLE `student_doc`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `subjects`
+--
+ALTER TABLE `subjects`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1323,6 +2367,18 @@ ALTER TABLE `academic_ranks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `book_issues`
+--
+ALTER TABLE `book_issues`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `branches`
 --
 ALTER TABLE `branches`
@@ -1333,6 +2389,12 @@ ALTER TABLE `branches`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `certificates`
+--
+ALTER TABLE `certificates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `colleges`
@@ -1357,6 +2419,18 @@ ALTER TABLE `college_courses`
 --
 ALTER TABLE `college_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `complaint`
+--
+ALTER TABLE `complaint`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `complaint_type`
+--
+ALTER TABLE `complaint_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -1389,6 +2463,30 @@ ALTER TABLE `departments`
   MODIFY `department_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `email_config`
+--
+ALTER TABLE `email_config`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `enquiry_type`
+--
+ALTER TABLE `enquiry_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `exams`
 --
 ALTER TABLE `exams`
@@ -1413,6 +2511,66 @@ ALTER TABLE `faculties`
   MODIFY `faculty_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `follow_up`
+--
+ALTER TABLE `follow_up`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `front_cms_media_gallery`
+--
+ALTER TABLE `front_cms_media_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `front_cms_menus`
+--
+ALTER TABLE `front_cms_menus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `front_cms_menu_items`
+--
+ALTER TABLE `front_cms_menu_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `front_cms_pages`
+--
+ALTER TABLE `front_cms_pages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+
+--
+-- AUTO_INCREMENT for table `front_cms_page_contents`
+--
+ALTER TABLE `front_cms_page_contents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `front_cms_programs`
+--
+ALTER TABLE `front_cms_programs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `front_cms_program_photos`
+--
+ALTER TABLE `front_cms_program_photos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `front_cms_settings`
+--
+ALTER TABLE `front_cms_settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `general_calls`
+--
+ALTER TABLE `general_calls`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `grades`
 --
 ALTER TABLE `grades`
@@ -1423,6 +2581,36 @@ ALTER TABLE `grades`
 --
 ALTER TABLE `languages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `notification_roles`
+--
+ALTER TABLE `notification_roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `notification_setting`
+--
+ALTER TABLE `notification_setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `payment_settings`
+--
+ALTER TABLE `payment_settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `read_notification`
+--
+ALTER TABLE `read_notification`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -1443,10 +2631,82 @@ ALTER TABLE `sections`
   MODIFY `sections_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `send_notification`
+--
+ALTER TABLE `send_notification`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `sessions`
 --
 ALTER TABLE `sessions`
   MODIFY `session_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `sms_config`
+--
+ALTER TABLE `sms_config`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `staff_attendance`
+--
+ALTER TABLE `staff_attendance`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff_attendance_type`
+--
+ALTER TABLE `staff_attendance_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `staff_designation`
+--
+ALTER TABLE `staff_designation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff_leave_details`
+--
+ALTER TABLE `staff_leave_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff_leave_request`
+--
+ALTER TABLE `staff_leave_request`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff_payroll`
+--
+ALTER TABLE `staff_payroll`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff_payslip`
+--
+ALTER TABLE `staff_payslip`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `staff_roles`
+--
+ALTER TABLE `staff_roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `staff_timeline`
+--
+ALTER TABLE `staff_timeline`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -1470,6 +2730,12 @@ ALTER TABLE `student_college_css`
 -- AUTO_INCREMENT for table `student_doc`
 --
 ALTER TABLE `student_doc`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `subjects`
+--
+ALTER TABLE `subjects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -1525,6 +2791,22 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users_authentication`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `front_cms_page_contents`
+--
+ALTER TABLE `front_cms_page_contents`
+  ADD CONSTRAINT `front_cms_page_contents_ibfk_1` FOREIGN KEY (`page_id`) REFERENCES `front_cms_pages` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `front_cms_program_photos`
+--
+ALTER TABLE `front_cms_program_photos`
+  ADD CONSTRAINT `front_cms_program_photos_ibfk_1` FOREIGN KEY (`program_id`) REFERENCES `front_cms_programs` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
