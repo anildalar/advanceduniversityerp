@@ -12,5 +12,7 @@ Developing the Multi University Management System With White Lable
 FrontEnd-
 http://rn53themes.net/themes/demo/education-master/index.html
 
+https://www.radiustheme.com/demo/html/academics/academics/index.html
+
 Backend-
 http://radixtouch.in/templates/admin/smart/source/light/

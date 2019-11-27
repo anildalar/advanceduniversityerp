@@ -264,8 +264,8 @@ class Customlib {
 
     function getAppNameVersion() {
         $status = array();
-        $status['App_name'] = 'Schoolio';
-        $status['App_ver'] = 'Ver. 1.0';
+        $status['App_name'] = 'Advanced UMS';
+        $status['App_ver'] = '1.0';
         return $status;
     }
 
@@ -458,7 +458,7 @@ class Customlib {
     }
 
     function getAppName() {
-        $appName = "Schoolio";
+        $appName = "Advanced UMS";
         return $appName;
     }
 
@@ -570,7 +570,7 @@ class Customlib {
 
     public function setUserLog($username, $role, $school_id) {
 		
-        if ($this->CI->agent->is_browser()) {
+        if ($this->CI->agent->is_browser() ) {
             $agent = $this->CI->agent->browser() . ' ' . $this->CI->agent->version();
         } elseif ($this->CI->agent->is_robot()) {
             $agent = $this->CI->agent->robot();
