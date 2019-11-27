@@ -21,6 +21,20 @@ class MY_Model extends CI_Model {
             return false;
         }
     }
+	public function getCurrentTheme($domain) {
+		
+        $this->db->select('university_theme');
+        $this->db->from('universities');
+        $this->db->where('university_domain', $domain);
+        $this->db->where('is_active', 1);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if ($query->num_rows() == 1) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
 }
 
 ?>

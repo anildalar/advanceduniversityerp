@@ -20,6 +20,7 @@ class Welcome extends Base_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$theme = $this->current_theme;
+		$this->load->view("$theme/home");
 	}
 }
