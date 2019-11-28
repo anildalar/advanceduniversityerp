@@ -14,5 +14,7 @@ http://rn53themes.net/themes/demo/education-master/index.html
 
 https://www.radiustheme.com/demo/html/academics/academics/index.html
 
+http://html.kodesolution.live/s/studypress/v6.0/demo/index-mp-layout1.html
+
 Backend-
 http://radixtouch.in/templates/admin/smart/source/light/

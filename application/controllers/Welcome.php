@@ -20,7 +20,6 @@ class Welcome extends Base_Controller {
 	 */
 	public function index()
 	{
-		$theme = $this->current_theme;
-		$this->load->view("$theme/home");
+		$this->load->view($this->current_theme.'/home');
 	}
 }
