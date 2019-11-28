@@ -23,7 +23,7 @@ class MY_Model extends CI_Model {
     }
 	public function getCurrentTheme($domain) {
 		
-        $this->db->select('university_theme');
+        $this->db->select('*');
         $this->db->from('universities');
         $this->db->where('university_domain', $domain);
         $this->db->where('is_active', 1);

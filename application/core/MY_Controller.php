@@ -4,6 +4,7 @@ class Base_Controller extends CI_Controller
 	public $user_id;
 	public $current_domain;
 	public $current_theme;
+	public $university_info;
 	
 	function __construct()
 	{
@@ -16,8 +17,8 @@ class Base_Controller extends CI_Controller
 		}
 		
 		$theme = $this->MY_Model->getCurrentTheme($this->current_domain);
-		
 		$this->current_theme = $theme[0]->university_theme;
+		$this->university_info = $theme[0];
 		
 	}
 }

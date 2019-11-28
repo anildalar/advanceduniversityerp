@@ -9,7 +9,7 @@ class Welcome extends Base_Controller {
 	}
 	public function index()
 	{
-		//$this->customlib->setUserLog($username, $result[0]->role,$result[0]->school_id);
-		$this->load->view($this->current_theme.'/home');
+		$data['university_info'] = $this->university_info;		
+		$this->load->view($this->current_theme.'/home',$data);
 	}
 }
