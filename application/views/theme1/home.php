@@ -21,8 +21,6 @@
 		<!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
 		<link href="<?php echo base_url('assets/frontend/theme1/'); ?>css/style-mob.css" rel="stylesheet" />
 		
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/frontend/theme1/'); ?>css/breakingNews.css"/>
-		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -369,21 +367,28 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">						
-							<div class="breakingNews bn-bordernone bn-darkred" id="bn7">
-								<div class="bn-title" style="width: auto;"><h2 style="display: inline-block;">Latest News</h2><span></span></div>
-								<ul style="left: 174px;">
-									<li style="display: block; top: 0px;"><a href="#"><span>CNN News</span> - Mauris interdum elit non sapien imperdiet, ac dapibus mi maximus</a></li>
-									<li style="top: -60px; display: block;"><a href="#"><span>BBC News</span> - Nullam sit amet nisl ex</a></li>
-									<li style="top: -60px; display: block;"><a href="#"><span>CNN News</span> - Cras lorem augue, facilisis a commodo in, facilisis finibus libero vel ultrices.</a></li>
-									<li style="top: -60px; display: block;"><a href="#"><span>AOL News</span> - Maecenas imperdiet ante vitae neque facilisis cursus</a></li>
-									<li style="top: -60px; display: block;"><a href="#"><span>YAHOO News</span> - Maecenas libero ipsum, placerat in mattis vel, tincidunt quis est.</a></li>
-									<li style="top: 60px; display: block;"><a href="#"><span>BBC News</span> - Curabitur tortor libero, vehicula sagittis luctus sed, lobortis sed arcu</a></li>
+							<marquee scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+								<ul style="display:inline-block;padding: 0 2px;">
+									<li class="tnews" style="list-style:none;">
+										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_0" href="https://bitmesra.ac.in/BIT_News?cid=1&amp;nid=475" target="_blank" style="color:white;font-weight:bold;cursor:pointer;">CAREER ADVANCEMENT SCHEME(CAS) GUIDELINES-2018</a> &nbsp;|
+									</li>
 								</ul>
-								<div class="bn-navi">
-									<span></span>
-									<span></span>
-								</div>
-							</div>
+								<ul style="display:inline-block;padding: 0 2px;">
+									<li class="tnews" style="list-style:none;">
+										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_1" href="https://www.bitmesra.ac.in/BIT_Recruitment_Details?recid=200" target="_blank" style="color:white;font-weight:bold;cursor:pointer;">ANNOUNCEMENT OF FACULTY RECRUITMENT - LAST DATE (15-10-2019)</a> &nbsp;|
+									</li>
+								</ul>
+								<ul style="display:inline-block;padding: 0 2px;">
+									<li class="tnews" style="list-style:none;">
+										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_2" onclick="return makePopUp('BIT_News?cid=1&amp;nid=691','50','250','900','600')" style="color:white;font-weight:bold;cursor:pointer;">ATTENTION ALL INSURANCE COMPANIES -  PARTICIPATE IN THE MEDICLAIM AND GENERAL INSURANCE POLICY BID</a> &nbsp;|
+									</li>
+								</ul>
+								<ul style="display:inline-block;padding: 0 2px;">
+									<li class="tnews" style="list-style:none;">
+										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_3" style="color:white;font-weight:bold;cursor:default;">BIT G.P. Birla Scholarship worth nearly 2.25 crores are available for meritorious students of BIT</a> &nbsp;|
+									</li>
+								</ul>
+							</marquee>
 						</div>
 					</div>
 				</div>
@@ -1315,8 +1320,6 @@
 		</section>
 
 		<!--Import jQuery before materialize.js-->
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/jQuery.js"></script>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/breakingNews.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/main.min.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/materialize.min.js"></script>
