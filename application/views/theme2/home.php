@@ -1053,7 +1053,7 @@
 									<h3>Information</h3>
 									<ul class="corporate-address">
 										<li><i class="fa fa-phone" aria-hidden="true"></i><a href="<?php echo base_url('assets/frontend/theme2/'); ?>Phone(01)800433633.html"> (01) 800 433 633 </a></li>
-										<li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@bostonea.com</li>
+										<li><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo $university_info->university_email; ?></li>
 									</ul>
 									<div class="newsletter-area">
 										<h3>Newsletter</h3>
@@ -1100,7 +1100,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-								<p>&copy; 2017 Academics All Rights Reserved. &nbsp; Designed by<a target="_blank" href="<?php echo base_url('assets/frontend/theme2/'); ?>http://radiustheme.com/"> RadiusTheme</a></p>
+								<p>&copy; <?php echo date('Y'); ?> <?php echo $university_info->university_name; ?> All Rights Reserved. &nbsp; Designed by<a target="_blank" href="http://<?php echo $university_info->university_domain; ?>/"> <?php echo $university_info->university_name; ?></a></p>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 								<ul class="payment-method">

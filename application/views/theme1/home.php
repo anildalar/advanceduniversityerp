@@ -1110,7 +1110,7 @@
 						<h4>Get In Touch</h4>
 						<p>Address: 28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
 						<p>Phone: <a href="#!">+101-1231-4321</a></p>
-						<p>Email: <a href="#!">info@educationmaster.com</a></p>
+						<p>Email: <a href="#!"><?php echo $university_info->university_email; ?></a></p>
 					</div>
 					<div class="col-md-4">
 						<h4>DOWNLOAD OUR FREE MOBILE APPS</h4>
@@ -1145,7 +1145,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="copy-right">
-						<p>Copyrights © 2018 RN53Themes. All rights reserved.</p>
+						<p>Copyrights © <?php echo date('Y'); ?> <?php echo $university_info->university_name; ?>. All rights reserved.</p>
 					</div>
 				</div>
 			</div>

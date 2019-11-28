@@ -94,7 +94,7 @@
 				<div class="row">
 					<div class="col-md-4 header-left">
 						<p><i class="fa fa-phone"></i> +01 2334 853</p>
-						<p><i class="fa fa-envelope"></i> <a href="<?php echo base_url('assets/frontend/theme4/'); ?>mailto:email@universe.com">email@universe.com</a></p>
+						<p><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $university_info->university_email; ?>"><?php echo $university_info->university_email; ?></a></p>
 					</div> <!-- /.header-left -->
 
 					<div class="col-md-4">
