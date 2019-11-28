@@ -103,59 +103,6 @@
 				  <ul class="list-inline pull-right">
 					<li class="mb-0 pb-0">
 					  <div class="top-dropdown-outer pt-5 pb-10">
-						<a class="top-cart-link has-dropdown text-white text-hover-theme-colored"><i class="fa fa-shopping-cart font-13"></i> (12)</a>
-						<ul class="dropdown">
-						  <li>
-							<!-- dropdown cart -->
-							<div class="dropdown-cart">
-							  <table class="table cart-table-list table-responsive">
-								<tbody>
-								  <tr>
-									<td><a href="<?php echo base_url('assets/frontend/theme3/'); ?>#"><img alt="" src="<?php echo base_url('assets/frontend/theme3/'); ?>images/products/sm1.jpg"></a></td>
-									<td><a href="<?php echo base_url('assets/frontend/theme3/'); ?>#"> Product Title</a></td>
-									<td>X3</td>
-									<td>$ 100.00</td>
-									<td><a class="close" href="<?php echo base_url('assets/frontend/theme3/'); ?>#"><i class="fa fa-close font-13"></i></a></td>
-								  </tr>
-								  <tr>
-									<td><a href="<?php echo base_url('assets/frontend/theme3/'); ?>#"><img alt="" src="<?php echo base_url('assets/frontend/theme3/'); ?>images/products/sm2.jpg"></a></td>
-									<td><a href="<?php echo base_url('assets/frontend/theme3/'); ?>#"> Product Title</a></td>
-									<td>X2</td>
-									<td>$ 70.00</td>
-									<td><a class="close" href="<?php echo base_url('assets/frontend/theme3/'); ?>#"><i class="fa fa-close font-13"></i></a></td>
-								  </tr>
-								</tbody>
-							  </table>
-							  <div class="total-cart text-right">
-								<table class="table table-responsive">
-								  <tbody>
-									<tr>
-									  <td>Cart Subtotal</td>
-									  <td>$170.00</td>
-									</tr>
-									<tr>
-									  <td>Shipping and Handling</td>
-									  <td>$20.00</td>
-									</tr>
-									<tr>
-									  <td>Order Total</td>
-									  <td>$190.00</td>
-									</tr>
-								  </tbody>
-								</table>
-							  </div>
-							  <div class="cart-btn text-right">
-								  <a class="btn btn-theme-colored btn-xs" href="<?php echo base_url('assets/frontend/theme3/'); ?>shop-cart.html"> View cart</a>
-								  <a class="btn btn-dark btn-xs" href="<?php echo base_url('assets/frontend/theme3/'); ?>shop-checkout.html"> Checkout</a>
-							  </div>
-							</div>
-							<!-- dropdown cart ends -->
-						  </li>
-						</ul>
-					  </div>
-					</li>
-					<li class="mb-0 pb-0">
-					  <div class="top-dropdown-outer pt-5 pb-10">
 						<a class="top-search-box has-dropdown text-white text-hover-theme-colored"><i class="fa fa-search font-13"></i> &nbsp;</a>
 						<ul class="dropdown">
 						  <li>
