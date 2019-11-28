@@ -1108,7 +1108,7 @@
 				<div class="row wed-foot-link-1">
 					<div class="col-md-4 foot-tc-mar-t-o">
 						<h4>Get In Touch</h4>
-						<p>Address: 28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
+						<p>Address: <?php echo $university_info->university_address; ?></p>
 						<p>Phone: <a href="#!">+101-1231-4321</a></p>
 						<p>Email: <a href="#!"><?php echo $university_info->university_email; ?></a></p>
 					</div>

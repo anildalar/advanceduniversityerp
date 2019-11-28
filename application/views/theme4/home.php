@@ -507,7 +507,7 @@
 					<div class="col-md-3">
 						<div class="footer-widget">
 							<h4 class="footer-widget-title">Contact Us</h4>
-							<p>The simple contact form below comes packed within this theme. </br></br>Mailing address:</br>877 Filbert Street</br> Chester, PA 19013</p>
+							<p>The simple contact form below comes packed within this theme. </br></br>Mailing address:</br><?php echo $university_info->university_address; ?></p>
 						</div>
 					</div>
 					<div class="col-md-2">
@@ -568,7 +568,7 @@
 				<div class="bottom-footer">
 					<div class="row">
 						<div class="col-md-5">
-							<p class="small-text">&copy; Copyright 2014. Universe designed by <a href="<?php echo base_url('assets/frontend/theme4/'); ?>#">Esmeth</a></p>
+							<p class="small-text">&copy; Copyright <?php echo date('Y'); ?>. <?php echo $university_info->university_name; ?> designed by <a href="#"><?php echo $university_info->university_name; ?></a></p>
 						</div> <!-- /.col-md-5 -->
 						<div class="col-md-7">
 							<ul class="footer-nav">
