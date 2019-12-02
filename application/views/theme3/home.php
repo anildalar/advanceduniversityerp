@@ -2321,11 +2321,11 @@
 			<div class="col-sm-6 col-md-3">
 			  <div class="widget dark">
 				<img class="mt-5 mb-20" alt="" src="<?php echo base_url('assets/frontend/theme3/'); ?>images/logo-white-footer.png">
-				<p>203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
+				<p><?php echo $university_info->university_address; ?></p>
 				<ul class="list-inline mt-5">
-				  <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i> <a class="text-gray" href="<?php echo base_url('assets/frontend/theme3/'); ?>#">123-456-789</a> </li>
-				  <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i> <a class="text-gray" href="<?php echo base_url('assets/frontend/theme3/'); ?>#">contact@yourdomain.com</a> </li>
-				  <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-2 mr-5"></i> <a class="text-gray" href="<?php echo base_url('assets/frontend/theme3/'); ?>#">www.yourdomain.com</a> </li>
+				  <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i> <a class="text-gray" href="<?php echo base_url('assets/frontend/theme3/'); ?>#"><?php echo $university_info->university_contact; ?></a> </li>
+				  <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i> <a class="text-gray" href="<?php echo base_url('assets/frontend/theme3/'); ?>#"><?php echo $university_info->university_email; ?></a> </li>
+				  <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-2 mr-5"></i> <a class="text-gray" href="<?php echo base_url('assets/frontend/theme3/'); ?>#">www.<?php echo $university_info->university_domain; ?></a> </li>
 				</ul>
 			  </div>
 			</div>
@@ -2374,8 +2374,7 @@
 			  <div class="widget dark">
 				<h5 class="widget-title mb-10">Call Us Now</h5>
 				<div class="text-gray">
-				  +61 3 1234 5678 <br>
-				  +12 3 1234 5678
+				  <?php echo $university_info->university_contact; ?> 
 				</div>
 			  </div>
 			</div>

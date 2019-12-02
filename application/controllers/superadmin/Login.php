@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends Admin_Controller {
 
 	public function __construct(){
 		$this->load->library('customlib');

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Education Master Template</title>
+		<title><?php echo $university_info->university_name; ?>-<?php echo $university_info->university_slogan; ?></title>
 		<!-- META TAGS -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,25 @@
 	</head>
 
 	<body>
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg">
 
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title"><i class="fa fa-bell"></i> Important Alerts</h4>
+					</div>
+					<div class="modal-body">
+						<p>Some text in the modal.<img src="https://www.rgpv.ac.in/IMAGES/new.gif"></p>
+						<p>Some text in the modal.<img src="https://www.rgpv.ac.in/IMAGES/new.gif"></p>
+						<p>Some text in the modal.<img src="https://www.rgpv.ac.in/IMAGES/new.gif"></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
 		<!-- MOBILE MENU -->
 		<section>
 			<div class="ed-mob-menu">
@@ -108,13 +126,23 @@
 						<div class="col-md-12">
 							<div class="ed-com-t1-left">
 								<ul>
-									<li><a href="#">Contact: Lake Road, Suite 180 Farmington Hills, U.S.A.</a>
+									<li><a href="#">Contact: <?php echo $university_info->university_address; ?></a>
 									</li>
-									<li><a href="#">Phone: +101-1231-1231</a>
+									<li><a href="#">Phone: <?php echo $university_info->university_contact; ?></a>
 									</li>
 								</ul>
+								<!--
+								<ul>
+									<li>
+										<a>A-</a> | 
+										<a>A</a> | 
+										<a>A+</a>
+									</li>
+								</ul>
+								-->
 							</div>
 							<div class="ed-com-t1-right">
+								
 								<ul>
 									<li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a>
 									</li>
@@ -363,36 +391,43 @@
 					</div>
 				</div>
 			</div>
-			<div class="search-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">						
-							<marquee scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
-								<ul style="display:inline-block;padding: 0 2px;">
-									<li class="tnews" style="list-style:none;">
-										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_0" href="https://bitmesra.ac.in/BIT_News?cid=1&amp;nid=475" target="_blank" style="color:white;font-weight:bold;cursor:pointer;">CAREER ADVANCEMENT SCHEME(CAS) GUIDELINES-2018</a> &nbsp;|
-									</li>
-								</ul>
-								<ul style="display:inline-block;padding: 0 2px;">
-									<li class="tnews" style="list-style:none;">
-										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_1" href="https://www.bitmesra.ac.in/BIT_Recruitment_Details?recid=200" target="_blank" style="color:white;font-weight:bold;cursor:pointer;">ANNOUNCEMENT OF FACULTY RECRUITMENT - LAST DATE (15-10-2019)</a> &nbsp;|
-									</li>
-								</ul>
-								<ul style="display:inline-block;padding: 0 2px;">
-									<li class="tnews" style="list-style:none;">
-										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_2" onclick="return makePopUp('BIT_News?cid=1&amp;nid=691','50','250','900','600')" style="color:white;font-weight:bold;cursor:pointer;">ATTENTION ALL INSURANCE COMPANIES -  PARTICIPATE IN THE MEDICLAIM AND GENERAL INSURANCE POLICY BID</a> &nbsp;|
-									</li>
-								</ul>
-								<ul style="display:inline-block;padding: 0 2px;">
-									<li class="tnews" style="list-style:none;">
-										<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_3" style="color:white;font-weight:bold;cursor:default;">BIT G.P. Birla Scholarship worth nearly 2.25 crores are available for meritorious students of BIT</a> &nbsp;|
-									</li>
-								</ul>
-							</marquee>
+			<?php 
+				if($university_info->show_marquee == 1){
+					?>
+					<div class="search-top">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">						
+									<marquee scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+										<ul style="display:inline-block;padding: 0 2px;">
+											<li class="tnews" style="list-style:none;">
+												<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_0" href="https://bitmesra.ac.in/BIT_News?cid=1&amp;nid=475" target="_blank" style="color:white;font-weight:bold;cursor:pointer;">CAREER ADVANCEMENT SCHEME(CAS) GUIDELINES-2018</a> &nbsp;|
+											</li>
+										</ul>
+										<ul style="display:inline-block;padding: 0 2px;">
+											<li class="tnews" style="list-style:none;">
+												<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_1" href="https://www.bitmesra.ac.in/BIT_Recruitment_Details?recid=200" target="_blank" style="color:white;font-weight:bold;cursor:pointer;">ANNOUNCEMENT OF FACULTY RECRUITMENT - LAST DATE (15-10-2019)</a> &nbsp;|
+											</li>
+										</ul>
+										<ul style="display:inline-block;padding: 0 2px;">
+											<li class="tnews" style="list-style:none;">
+												<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_2" onclick="return makePopUp('BIT_News?cid=1&amp;nid=691','50','250','900','600')" style="color:white;font-weight:bold;cursor:pointer;">ATTENTION ALL INSURANCE COMPANIES -  PARTICIPATE IN THE MEDICLAIM AND GENERAL INSURANCE POLICY BID</a> &nbsp;|
+											</li>
+										</ul>
+										<ul style="display:inline-block;padding: 0 2px;">
+											<li class="tnews" style="list-style:none;">
+												<a id="ContentNewsTicker_nticker_rpt_tickernews_tickNews_3" style="color:white;font-weight:bold;cursor:default;">BIT G.P. Birla Scholarship worth nearly 2.25 crores are available for meritorious students of BIT</a> &nbsp;|
+											</li>
+										</ul>
+									</marquee>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+					<?php
+				}
+			?>
+			
 		</section>
 		<!--END HEADER SECTION-->
 
@@ -974,6 +1009,11 @@
 					<div class="col-md-4">
 						<div class="bot-gal h-blog ho-event">
 							<h4>News & Event</h4>
+							<?php
+								echo '<pre>';
+								var_dump($university_news);
+								echo '</pre>';
+							?>
 							<div class="ho-event">
 								<ul>
 									<li>
@@ -1109,7 +1149,7 @@
 					<div class="col-md-4 foot-tc-mar-t-o">
 						<h4>Get In Touch</h4>
 						<p>Address: <?php echo $university_info->university_address; ?></p>
-						<p>Phone: <a href="#!">+101-1231-4321</a></p>
+						<p>Phone: <a href="#!"><?php echo $university_info->university_contact; ?></a></p>
 						<p>Email: <a href="#!"><?php echo $university_info->university_email; ?></a></p>
 					</div>
 					<div class="col-md-4">
@@ -1320,9 +1360,17 @@
 		</section>
 
 		<!--Import jQuery before materialize.js-->
+		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/jquery-2.2.4.min.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/main.min.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/materialize.min.js"></script>
 		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/custom.js"></script>
+		<script>
+			$('#myModal').modal({
+					dismissible: true
+			});
+			//call the specific div (modal)
+			<?php echo ($university_info->show_alertbox == 1)?"$('#myModal').modal('open')":''; ?>;
+		</script>
 	</body>
 </html>

@@ -83,29 +83,31 @@ class Student_model extends MY_Model {
         }
     }
     
-  public function testingGet($id = null) {
-  $this->db->select('student_session.transport_fees,student_session.vehroute_id,student_session.id as `student_session_id`,student_session.fees_discount,student_session.last_session_fee,classes.id AS `class_id`,classes.class,sections.id AS `section_id`,sections.section,students.id,students.admission_no , students.roll_no,students.admission_date,students.firstname,  students.lastname,students.image,    students.mobileno, students.email ,students.state ,   students.city , students.pincode ,     students.religion, students.cast,    students.dob ,students.current_address, students.previous_school,
+	public function testingGet($id = null) {
+		$this->db->select('student_session.transport_fees,student_session.vehroute_id,student_session.id as `student_session_id`,student_session.fees_discount,student_session.last_session_fee,classes.id AS `class_id`,classes.class,sections.id AS `section_id`,sections.section,students.id,students.admission_no , students.roll_no,students.admission_date,students.firstname,  students.lastname,students.image,    students.mobileno, students.email ,students.state ,   students.city , students.pincode ,     students.religion, students.cast,    students.dob ,students.current_address, students.previous_school,
                     students.guardian_is,
                     students.permanent_address,students.category_id,students.adhar_no,students.samagra_id,students.bank_account_no,students.bank_name, students.ifsc_code , students.guardian_name , students.guardian_relation,students.guardian_phone,students.guardian_address,students.is_active ,students.created_at ,students.updated_at,students.father_name,students.father_phone,students.father_occupation,students.mother_name,students.mother_phone,students.mother_occupation,students.guardian_occupation,students.gender,students.guardian_is,students.rte,students.guardian_photo,blood_group,transfer_certificate.student_id')->from('students');
-                    $this->db->join('student_session', 'student_session.student_id = students.id');
-                    $this->db->join('classes', 'student_session.class_id = classes.id');
-                    $this->db->join('sections', 'sections.id = student_session.section_id');
-                    $this->db->join(' transfer_certificate','students.id=transfer_certificate.student_id','left');
-                    $this->db->where('student_session.session_id', $this->current_session);
-                    $this->db->where('transfer_certificate.student_id IS NULL');
-                    if ($id != null) {
-                    $this->db->where('students.id', $id);
-                    } else {
-                    $this->db->order_by('students.id', 'desc');
-                    }
-                    $this->db->where('students.school_id', $this->school_id);
-                    $query = $this->db->get();
-                    if ($id != null) {
-                    return $query->row_array();
-                    } else {
-                    
-                    return $query->result_array();
-                    }
+		$this->db->join('student_session', 'student_session.student_id = students.id');
+		$this->db->join('classes', 'student_session.class_id = classes.id');
+		$this->db->join('sections', 'sections.id = student_session.section_id');
+		$this->db->join(' transfer_certificate','students.id=transfer_certificate.student_id','left');
+		$this->db->where('student_session.session_id', $this->current_session);
+		$this->db->where('transfer_certificate.student_id IS NULL');
+		
+		if ($id != null) {
+			$this->db->where('students.id', $id);
+		} else {
+			$this->db->order_by('students.id', 'desc');
+		}
+		
+		$this->db->where('students.school_id', $this->school_id);
+		$query = $this->db->get();
+		
+		if ($id != null) {
+			return $query->row_array();
+		} else {
+			return $query->result_array();
+		}
     }
 
     public function search_student() {
@@ -142,7 +144,7 @@ class Student_model extends MY_Model {
         $this->db->join('classes', 'student_session.class_id = classes.id');
         $this->db->join('sections', 'sections.id = student_session.section_id');
         $this->db->join('categories', 'students.category_id = categories.id','left');
-        $this->db->join(' transfer_certificate','students.id=transfer_certificate.student_id','left');
+        $this->db->join('transfer_certificate','students.id=transfer_certificate.student_id','left');
         $this->db->where(array('student_session.session_id'=>$this->current_session,'students.school_id'=>$this->school_id));
         if ($class_id != null) {
             $this->db->where('student_session.class_id', $class_id);
@@ -176,12 +178,12 @@ class Student_model extends MY_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
-     // by pratyush
+    
     function getStudentSessionids($class_id,$section_id){
         $studentSesIds = $this->db->select('id')->from('student_session')->where(array('school_id'=>$this->school_id,'session_id'=>$this->current_session,'class_id'=>$class_id,'section_id'=>$section_id))->get()->result_array();
         return $studentSesIds;
     }
-    //by pratyush
+    
     public function transportsearchByClassSection($class_id = null, $section_id = null,$route_id = null) {
         $this->db->select('classes.id AS `class_id`,student_session.id as student_session_id,students.id,classes.class,sections.id AS `section_id`,sections.section,students.id,students.admission_no , students.roll_no,students.admission_date,students.firstname,  students.lastname,students.image,    students.mobileno, students.email ,students.state ,   students.city , students.pincode ,     students.religion,     students.dob ,students.current_address,    students.permanent_address,IFNULL(students.category_id, 0) as `category_id`,IFNULL(categories.category, "") as `category`,students.adhar_no,students.samagra_id,students.bank_account_no,students.bank_name, students.ifsc_code , students.guardian_name , students.guardian_relation,students.guardian_phone,students.guardian_address,students.is_active ,students.created_at ,students.updated_at,students.father_name,students.rte,students.gender,std_transport_fee.amount as `transport_submit_amount`,std_transport_fee.amount_data as `transport_fee_data`,student_session.transport_fees as `transport_fee`')->from('students');
         $this->db->join('student_session', 'student_session.student_id = students.id');
@@ -258,7 +260,6 @@ class Student_model extends MY_Model {
     }
 
     public function searchFullText($searchterm) {
-                          
         $this->db->select('classes.id AS `class_id`,students.id,classes.class,sections.id AS `section_id`,sections.section,students.id,students.admission_no , students.roll_no,students.admission_date,students.firstname,  students.lastname,students.image,    students.mobileno,students.father_phone, students.email ,students.state ,   students.city , students.pincode ,     students.religion,     students.dob ,students.current_address,    students.permanent_address,IFNULL(students.category_id, 0) as `category_id`,IFNULL(categories.category, "") as `category`,      students.adhar_no,students.samagra_id,students.bank_account_no,students.bank_name, students.ifsc_code ,students.father_name , students.guardian_name , students.guardian_relation,students.guardian_phone,students.guardian_address,students.is_active ,students.created_at ,students.updated_at,students.gender,students.rte,student_session.session_id,student_session.transport_fees as `transport_fee`,std_transport_fee.amount as `transport_submit_amount`,std_transport_fee.amount_data as `transport_fee_data`')->from('students');
         $this->db->join('student_session', 'student_session.student_id = students.id');        
         $this->db->join('classes', 'student_session.class_id = classes.id');
@@ -280,14 +281,10 @@ class Student_model extends MY_Model {
         $this->db->or_like('categories.category', $searchterm);
         $this->db->group_end();
         $this->db->order_by('students.id');
-        //$this->db->limit('100');
-                          
         $query = $this->db->get();
-                          //var_dump($this->db->last_query());die;
         return $query->result_array(); 
     }
     public function getTranByRoute($class_id = '',$section_id = '',$route_id = '') {
-                          //var_dump($this->current_session);die;
         $this->db->select('classes.id AS `class_id`,students.id,classes.class,sections.id AS `section_id`,sections.section,students.id,students.admission_no , students.roll_no,students.admission_date,students.firstname,  students.lastname,students.image,    students.mobileno,students.father_phone, students.email ,students.state ,   students.city , students.pincode ,     students.religion,     students.dob ,students.current_address,    students.permanent_address,IFNULL(students.category_id, 0) as `category_id`,IFNULL(categories.category, "") as `category`,      students.adhar_no,students.samagra_id,students.bank_account_no,students.bank_name, students.ifsc_code ,students.father_name , students.guardian_name , students.guardian_relation,students.guardian_phone,students.guardian_address,students.is_active ,students.created_at ,students.updated_at,students.gender,students.rte,student_session.session_id,student_session.transport_fees as `transport_fee')->from('students');
         $this->db->join('student_session', 'student_session.student_id = students.id');        
         $this->db->join('classes', 'student_session.class_id = classes.id');
@@ -304,7 +301,6 @@ class Student_model extends MY_Model {
             $this->db->where('student_session.vehroute_id',$route_id);
         }
         $this->db->order_by('students.id');
-        //$this->db->limit('100');
         $query = $this->db->get();
         return $query->result_array(); 
     }
@@ -320,10 +316,8 @@ class Student_model extends MY_Model {
         $this->db->trans_start();
         $this->db->where('id', $id);
         $this->db->delete('students');
-
         $this->db->where('student_id', $id);
         $this->db->delete('student_session');
-
         $this->db->where('user_id', $id);
         $this->db->where('role', 'student');
         $this->db->delete('users');

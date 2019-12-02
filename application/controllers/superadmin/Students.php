@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends Admin_Controller {
+class Students extends Admin_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,11 +23,13 @@ class Dashboard extends Admin_Controller {
 		
 		$this->load->model('University_model');
 	}
-	
 	public function index()
 	{
 		$data['total_universities'] = $this->University_model->get();
 		
-		$this->load->view('superadmin/dashboard',$data);
+		echo '<pre>';
+		var_dump($data['total_universities']);
+		echo '</pre>';die;
+		$this->load->view('superadmin/students/all_students');
 	}
 }
