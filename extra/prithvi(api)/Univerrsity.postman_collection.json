@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "faf8bebd-f65b-4b79-a375-1225bf6ec867",
+		"name": "Univerrsity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getstudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.43.11/api/getstudents?token=12345&university_id=1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"43",
+						"11"
+					],
+					"path": [
+						"api",
+						"getstudents"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "12345"
+						},
+						{
+							"key": "university_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
