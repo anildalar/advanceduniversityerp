@@ -14,9 +14,9 @@ class Welcome extends Base_Controller {
 	//3. Method (Function) Area
 	public function index()
 	{
-		$data['university_info'] = $this->university_info;
-		$data['university_news'] = $this->News_model->get();
+		//$data['university_info'] = $this->university_info;
+		//$data['university_news'] = $this->News_model->get();
 		
-		$this->load->view($this->current_theme.'/home',$data);
+		//$this->load->view($this->current_theme.'/home',$data);
 	}
 }
