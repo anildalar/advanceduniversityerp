@@ -1,0 +1,137 @@
+/** Your theme modifications here **/
+
+@media all and (max-width: 520px) and (min-width: 300px) {
+
+#top ul.menu{
+text-align:left;
+}
+#top ul{
+padding-left:0px;
+}
+#top ul.menu > li{
+margin-bottom:8px;
+}
+.navbar-toggle{
+margin-top:5px;
+margin-bottom:5px;
+}
+.navbar-default .navbar-toggle i{
+color:#EA6A50;
+}
+.navbar-default .navbar-toggle{
+border:none;
+}
+h3, .h3 {
+    font-size: 18px;
+}
+.clearfix-xs{
+clear:both;
+}
+.single-Dropdown li ul li a {
+    color: #ffffff;
+    font-size: 12px;
+    display: block;
+}
+#main-slider .owl-controls {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.slider-text {
+  color: #ffffff;
+ 
+  padding: 4px 6px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+      background: rgba(10,26,50,0.5);
+}
+
+.slider-text h3{
+width: 95%;
+text-align: center;
+margin: 0 auto;
+color: #FCEAC0;
+font-size: 14px;
+}
+.SERO-box h5 {
+    margin-top: 0px;
+   margin-bottom:0px;
+    float: left;
+    width: 100%;
+}
+.xs-padding0{
+padding:0px;
+}
+.SERO-box blockquote{
+margin:0px;
+border-left:0px;
+padding:0px;
+}
+.small-title {
+    color: #EA6A50;
+    font-size: 14px;
+}
+.breadcrumb > li a{
+font-size:12px;
+}
+.single-Dropdown li ul li{
+border-bottom:none;
+}
+.navbar .yamm-content ul li a{
+color:#FFFFFF;
+}
+.navbar .yamm-content ul li{
+border-bottom:none;
+}
+.navbar .yamm-content h5{
+color:#FFFFFF;
+}
+
+.single-Dropdown2 li ul li{
+border-bottom:none;
+}
+.single-Dropdown2 li ul li a{
+color:#FFFFFF;
+}
+.br1{
+	border-left:0px;
+}
+
+/*Uni slider*/
+.Uni_Slider_text{
+top:-20px !important;
+}
+.Uni_SliderB_text{
+bottom: 0px !important;
+}
+.uni_Slider_box h3{
+margin-bottom: 0px;
+font-size: 10px !important;
+letter-spacing: 1px;
+}
+.uni_Slider_box h6{
+text-align: center;
+color: #050505;
+font-size: 8px !important;
+margin-top: 3px !important;
+}
+.p0-xs{
+padding:0px !important;
+}
+.uni_Slider_box h3 span{
+font-weight:400 !important;
+}
+
+/*end uni slide css*/
+
+
+
+}
+
+@media all and (max-width: 990px) and (min-width: 519px) {
+.clearfix-sm{
+clear:both;
+}
+}

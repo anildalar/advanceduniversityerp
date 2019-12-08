@@ -10,15 +10,15 @@ class Base_Controller extends CI_Controller
 	{
 		parent::__construct();
 		
-		//$this->current_domain = '192.168.43.11';//$_SERVER['HTTP_HOST'];
+		$this->current_domain = $_SERVER['HTTP_HOST'];
 		
-		//if( $this->MY_Model->checkValidDomain($this->current_domain) == false ){
-			//echo '<div style="text-align:center;">Site Not Activated. Please Contact to system Admin.</div>';die;
-		//}
+		if( $this->MY_Model->checkValidDomain($this->current_domain) == false ){
+			echo '<div style="text-align:center;">Site Not Activated. Please Contact to system Admin.</div>';die;
+		}
 		
-		//$theme = $this->MY_Model->getCurrentTheme($this->current_domain);
-		//$this->current_theme = $theme[0]->university_theme;
-		//$this->university_info = $theme[0];
+		$theme = $this->MY_Model->getCurrentTheme($this->current_domain);
+		$this->current_theme = $theme[0]->university_theme;
+		$this->university_info = $theme[0];
 		
 	}
 }

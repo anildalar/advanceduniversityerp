@@ -9,23 +9,23 @@
 		<meta name="description" content="Education master is one of the best educational html template, it's suitable for all education websites like university,college,school,online education,tution center,distance education,computer education">
 		<meta name="keyword" content="education html template, university template, college template, school template, online education template, tution center template">
 		<!-- FAV ICON(BROWSER TAB ICON) -->
-		<link rel="shortcut icon" href="<?php echo base_url('assets/frontend/theme1/'); ?>images/fav.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/fav.ico" type="image/x-icon">
 		<!-- GOOGLE FONT -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CJosefin+Sans:600,700" rel="stylesheet">
 		<!-- FONTAWESOME ICONS -->
 	   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<!-- ALL CSS FILES -->
-		<link href="<?php echo base_url('assets/frontend/theme1/'); ?>css/materialize.css" rel="stylesheet">
-		<link href="<?php echo base_url('assets/frontend/theme1/'); ?>css/bootstrap.css" rel="stylesheet" />
-		<link href="<?php echo base_url('assets/frontend/theme1/'); ?>css/style.css" rel="stylesheet" />
+		<link href="<?php echo base_url('assets/frontend/university/theme1/'); ?>css/materialize.css" rel="stylesheet">
+		<link href="<?php echo base_url('assets/frontend/university/theme1/'); ?>css/bootstrap.css" rel="stylesheet" />
+		<link href="<?php echo base_url('assets/frontend/university/theme1/'); ?>css/style.css" rel="stylesheet" />
 		<!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
-		<link href="<?php echo base_url('assets/frontend/theme1/'); ?>css/style-mob.css" rel="stylesheet" />
+		<link href="<?php echo base_url('assets/frontend/university/theme1/'); ?>css/style-mob.css" rel="stylesheet" />
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/html5shiv.js"></script>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/respond.min.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/html5shiv.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -55,7 +55,7 @@
 				<div class="ed-mob-menu-con">
 					<div class="ed-mm-left">
 						<div class="wed-logo">
-							<a href="<?php echo base_url('assets/frontend/theme1/'); ?>index-2.html"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/logo.png" alt="" />
+							<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>index-2.html"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/logo.png" alt="" />
 							</a>
 						</div>
 					</div>
@@ -66,22 +66,22 @@
 								<a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
 								<h4>All Courses</h4>
 								<ul>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Accounting/Finance</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">civil engineering</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Art/Design</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Marine Engineering</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Business Management</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Journalism/Writing</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Physical Education</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Political Science</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Sciences</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Statistics</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Web Design/Development</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">SEO</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Google Business</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Graphics Design</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Networking Courses</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Information technology</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Accounting/Finance</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">civil engineering</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Art/Design</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Marine Engineering</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Business Management</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Journalism/Writing</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Physical Education</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Political Science</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Sciences</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Statistics</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Web Design/Development</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">SEO</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Google Business</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Graphics Design</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Networking Courses</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Information technology</a></li>
 								</ul>
 								<h4>User Account</h4>
 								<ul>
@@ -90,25 +90,25 @@
 								</ul>
 								<h4>All Pages</h4>
 								<ul>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>index-2.html">Home</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html">About us</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html">Admission</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>all-courses.html">All courses</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Course details</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>awards.html">Awards</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>seminar.html">Seminar</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">Events</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>event-details.html">Event details</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>event-register.html">Event register</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>contact-us.html">Contact us</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>index-2.html">Home</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html">About us</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html">Admission</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>all-courses.html">All courses</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Course details</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>awards.html">Awards</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>seminar.html">Seminar</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">Events</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>event-details.html">Event details</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>event-register.html">Event register</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>contact-us.html">Contact us</a></li>
 								</ul>
 								<h4>User Profile</h4>
 								<ul>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>dashboard.html">User profile</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-courses.html">Courses</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-exams.html">Exams</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-profile.html">Prfile</a></li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-time-line.html">Time line</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>dashboard.html">User profile</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-courses.html">Courses</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-exams.html">Exams</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-profile.html">Prfile</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-time-line.html">Time line</a></li>
 								</ul>
 							</div>
 						</div>
@@ -171,47 +171,47 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="wed-logo">
-								<a href="<?php echo base_url('assets/frontend/theme1/'); ?>index-2.html"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/logo.png" alt="" />
+								<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>index-2.html"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/logo.png" alt="" />
 								</a>
 							</div>
 							<div class="main-menu">
 								<ul>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>index-2.html">Home</a>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>index-2.html">Home</a>
 									</li>
 									<li class="about-menu">
-										<a href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html" class="mm-arr">About us</a>
+										<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html" class="mm-arr">About us</a>
 										<!-- MEGA MENU 1 -->
 										<div class="mm-pos">
 											<div class="about-mm m-menu">
 												<div class="m-menu-inn">
 													<div class="mm1-com mm1-s1">
 														<div class="ed-course-in">
-															<a class="course-overlay menu-about" href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html">
-																<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-about.jpg" alt="">
+															<a class="course-overlay menu-about" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html">
+																<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-about.jpg" alt="">
 																<span>Academics</span>
 															</a>
 														</div>
 													</div>
 													<div class="mm1-com mm1-s2">
 														<p>Want to change the world? At Berkeley we’re doing just that. When you join the Golden Bear community, you’re part of an institution that shifts the global conversation every single day.</p>
-														<a href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html" class="mm-r-m-btn">Read more</a>
+														<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html" class="mm-r-m-btn">Read more</a>
 													</div>
 													<div class="mm1-com mm1-s3">
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>all-courses.html">All Courses</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Course details</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html">About</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html">Admission</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>awards.html">Awards</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>all-courses.html">All Courses</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Course details</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html">About</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html">Admission</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>awards.html">Awards</a></li>
 														</ul>
 													</div>
 													<div class="mm1-com mm1-s4">
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>dashboard.html">Student profile</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-courses.html">Dashboard courses</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-exams.html">Dashboard exams</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-profile.html">Dashboard profile</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-time-line.html">Dashboard timeline</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>dashboard.html">Student profile</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-courses.html">Dashboard courses</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-exams.html">Dashboard exams</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-profile.html">Dashboard profile</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-time-line.html">Dashboard timeline</a></li>
 														</ul>
 													</div>
 												</div>
@@ -226,50 +226,50 @@
 												<div class="m-menu-inn">
 													<div class="mm2-com mm1-com mm1-s1">
 														<div class="ed-course-in">
-															<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html">
-																<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-about1.jpg" alt="">
+															<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html">
+																<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-about1.jpg" alt="">
 																<span>Academics</span>
 															</a>
 														</div>
 														<p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-														<a href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html" class="mm-r-m-btn">Read more</a>
+														<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html" class="mm-r-m-btn">Read more</a>
 													</div>
 													<div class="mm2-com mm1-com mm1-s1">
 														<div class="ed-course-in">
-															<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html">
-																<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-adm1.jpg" alt="">
+															<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html">
+																<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-adm1.jpg" alt="">
 																<span>Admission</span>
 															</a>
 														</div>
 														<p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-														<a href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html" class="mm-r-m-btn">Read more</a>
+														<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html" class="mm-r-m-btn">Read more</a>
 													</div>
 													<div class="mm2-com mm1-com mm1-s1">
 														<div class="ed-course-in">
-															<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>awards.html">
-																<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-cam1.jpg" alt="">
+															<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>awards.html">
+																<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-cam1.jpg" alt="">
 																<span>History & awards</span>
 															</a>
 														</div>
 														<p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-														<a href="<?php echo base_url('assets/frontend/theme1/'); ?>awards.html" class="mm-r-m-btn">Read more</a>
+														<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>awards.html" class="mm-r-m-btn">Read more</a>
 													</div>
 													<div class="mm2-com mm1-com mm1-s4">
 														<div class="ed-course-in">
-															<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>seminar.html">
-																<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-res1.jpg" alt="">
+															<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>seminar.html">
+																<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-res1.jpg" alt="">
 																<span>Seminar 2018</span>
 															</a>
 														</div>
 														<p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-														<a href="<?php echo base_url('assets/frontend/theme1/'); ?>seminar.html" class="mm-r-m-btn">Read more</a>
+														<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>seminar.html" class="mm-r-m-btn">Read more</a>
 													</div>
 
 												</div>
 											</div>
 										</div>
 									</li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>all-courses.html">All Courses</a></li>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>all-courses.html">All Courses</a></li>
 									<!--<li><a class='dropdown-button ed-sub-menu' href='#' data-activates='dropdown1'>Courses</a></li>-->
 									<li class="cour-menu">
 										<a href="#!" class="mm-arr">All Pages</a>
@@ -280,106 +280,106 @@
 													<div class="mm1-com mm1-cour-com mm1-s3">
 														<h4>Frontend pages:1</h4>
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>index-2.html">Home</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>index-1.html">Home - 1</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>all-courses.html">All Courses</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Course Details</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html">About us</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html">admission</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>awards.html">awards</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>blog.html">blog</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>blog-details.html">blog details</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>contact-us.html">contact us</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>departments.html">Departments</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">events</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>event-details.html">event details</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>event-register.html">event register</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>index-2.html">Home</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>index-1.html">Home - 1</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>all-courses.html">All Courses</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Course Details</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html">About us</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html">admission</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>awards.html">awards</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>blog.html">blog</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>blog-details.html">blog details</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>contact-us.html">contact us</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>departments.html">Departments</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">events</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>event-details.html">event details</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>event-register.html">event register</a></li>
 														</ul>
 													</div>
 													<div class="mm1-com mm1-cour-com mm1-s3">
 														<h4>Frontend pages:2</h4>
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>facilities.html">facilities</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>facilities-detail.html">facilities detail</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>research.html">research</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>seminar.html">seminar</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>gallery-photo.html">gallery photo</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>facilities.html">facilities</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>facilities-detail.html">facilities detail</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>research.html">research</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>seminar.html">seminar</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>gallery-photo.html">gallery photo</a></li>
 														</ul>
 														<h4 class="ed-dr-men-mar-top">User Dashboard</h4>
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>dashboard.html">Student profile</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-courses.html">Dashboard courses</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-exams.html">Dashboard exams</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-profile.html">Dashboard profile</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>db-time-line.html">Dashboard timeline</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>dashboard.html">Student profile</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-courses.html">Dashboard courses</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-exams.html">Dashboard exams</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-profile.html">Dashboard profile</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-time-line.html">Dashboard timeline</a></li>
 														</ul>
 													</div>
 													<div class="mm1-com mm1-cour-com mm1-s3">
 														<h4>Admin panel:1</h4>
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin.html">admin</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-add-courses.html">Add new course</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-all-courses.html">All courses</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-student-details.html">Student details</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-user-add.html">Add new user</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-user-all.html">All users</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-panel-setting.html">Admin setting</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-event-add.html">event add</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-event-all.html">event all</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-setting.html">Admin Setting</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-slider.html">Slider setting</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-slider-edit.html">Slider edit</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-course-details.html">course details</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-login.html">admin login</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin.html">admin</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-add-courses.html">Add new course</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-all-courses.html">All courses</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-student-details.html">Student details</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-user-add.html">Add new user</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-user-all.html">All users</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-panel-setting.html">Admin setting</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-event-add.html">event add</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-event-all.html">event all</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-setting.html">Admin Setting</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-slider.html">Slider setting</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-slider-edit.html">Slider edit</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-course-details.html">course details</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-login.html">admin login</a></li>
 														</ul>
 													</div>
 													<div class="mm1-com mm1-cour-com mm1-s3">
 														<h4>Admin panel:2</h4>
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-event-edit.html">event edit</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-exam-add.html">exam add</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-exam-all.html">exam all</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-exam-edit.html">exam edit</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-export-data.html">export data</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-import-data.html">import data</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-job-add.html">Add new jobs</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-job-all.html">All jobs</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-job-edit.html">Edit job</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-main-menu.html">main menu</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-page-add.html">Add new page</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-page-all.html">All pages</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-page-edit.html">Edit page</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-forgot.html">forgot password</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-event-edit.html">event edit</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-exam-add.html">exam add</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-exam-all.html">exam all</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-exam-edit.html">exam edit</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-export-data.html">export data</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-import-data.html">import data</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-job-add.html">Add new jobs</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-job-all.html">All jobs</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-job-edit.html">Edit job</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-main-menu.html">main menu</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-page-add.html">Add new page</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-page-all.html">All pages</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-page-edit.html">Edit page</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-forgot.html">forgot password</a></li>
 														</ul>
 													</div>
 													<div class="mm1-com mm1-cour-com mm1-s4">
 														<h4>Admin panel:3</h4>
 														<ul>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-quick-link.html">quick link</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-seminar-add.html">Add new seminar</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-seminar-all.html">All seminar</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-seminar-edit.html">Edit seminar</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-seminar-enquiry.html">Semester enquiry</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-all-enquiry.html">All enquiry</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-view-enquiry.html">All enquiry view</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-event-enquiry.html">event enquiry</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-admission-enquiry.html">Admission enquiry</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-common-enquiry.html">common enquiry</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-course-enquiry.html">course enquiry</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-all-menu.html">menu all</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-about-menu.html">Menu - About</a></li>
-															<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>admin-admission-menu.html">Menu - admission</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-quick-link.html">quick link</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-seminar-add.html">Add new seminar</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-seminar-all.html">All seminar</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-seminar-edit.html">Edit seminar</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-seminar-enquiry.html">Semester enquiry</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-all-enquiry.html">All enquiry</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-view-enquiry.html">All enquiry view</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-event-enquiry.html">event enquiry</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-admission-enquiry.html">Admission enquiry</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-common-enquiry.html">common enquiry</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-course-enquiry.html">course enquiry</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-all-menu.html">menu all</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-about-menu.html">Menu - About</a></li>
+															<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admin-admission-menu.html">Menu - admission</a></li>
 														</ul>
 													</div>
 												</div>
 											</div>
 										</div>
 									</li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">Events</a>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">Events</a>
 									</li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>dashboard.html">Student</a>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>dashboard.html">Student</a>
 									</li>
-									<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>contact-us.html">Contact us</a>
+									<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>contact-us.html">Contact us</a>
 									</li>
 								</ul>
 							</div>
@@ -437,7 +437,7 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
 					<div class="item slider1 active">
-						<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/slider/1.jpg" alt="">
+						<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/slider/1.jpg" alt="">
 						<div class="carousel-caption slider-con">
 							<h2>Welcome to <span>University</span></h2>
 							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
@@ -445,7 +445,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/slider/2.jpg" alt="">
+						<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/slider/2.jpg" alt="">
 						<div class="carousel-caption slider-con">
 							<h2>Admission open <span>2018</span></h2>
 							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
@@ -453,7 +453,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/slider/3.jpg" alt="">
+						<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/slider/3.jpg" alt="">
 						<div class="carousel-caption slider-con">
 							<h2>Education <span>Master</span></h2>
 							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
@@ -479,16 +479,16 @@
 					<div class="wed-hom-ser">
 						<ul>
 							<li>
-								<a href="<?php echo base_url('assets/frontend/theme1/'); ?>awards.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/icon/h-ic1.png" alt=""> Academy</a>
+								<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>awards.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/icon/h-ic1.png" alt=""> Academy</a>
 							</li>
 							<li>
-								<a href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/icon/h-ic2.png" alt=""> Admission</a>
+								<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/icon/h-ic2.png" alt=""> Admission</a>
 							</li>
 							<li>
-								<a href="<?php echo base_url('assets/frontend/theme1/'); ?>all-courses.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/icon/h-ic4.png" alt=""> Courses</a>
+								<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>all-courses.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/icon/h-ic4.png" alt=""> Courses</a>
 							</li>
 							<li>
-								<a href="<?php echo base_url('assets/frontend/theme1/'); ?>seminar.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/icon/h-ic3.png" alt=""> Seminar</a>
+								<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>seminar.html" class="waves-effect waves-light btn-large wed-pop-ser-btn"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/icon/h-ic3.png" alt=""> Seminar</a>
 							</li>
 						</ul>
 					</div>
@@ -509,64 +509,64 @@
 					<div class="ed-course">
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>about.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-about.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>about.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-about.jpg" alt="">
 									<span>Academics</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>admission.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-adm1.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>admission.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-adm1.jpg" alt="">
 									<span>Admission</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>dashboard.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-cam.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>dashboard.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-cam.jpg" alt="">
 									<span>Students profile</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>research.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-res.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>research.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-res.jpg" alt="">
 									<span>Research & Education</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>all-courses.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-about1.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>all-courses.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-about1.jpg" alt="">
 									<span>Couse</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>db-time-line.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-adm.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>db-time-line.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-adm.jpg" alt="">
 									<span>Exam Time Line</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>seminar.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-cam1.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>seminar.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-cam1.jpg" alt="">
 									<span>Seminar 2018</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="ed-course-in">
-								<a class="course-overlay" href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
-									<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/h-res1.jpg" alt="">
+								<a class="course-overlay" href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
+									<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/h-res1.jpg" alt="">
 									<span>Research & Education</span>
 								</a>
 							</div>
@@ -591,19 +591,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-1.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-1.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Aerospace Engineering</h3>
 									</a>
 									<h4>Technology / Space / Aerospace</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>10 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 570</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>10 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 570</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -611,19 +611,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-2.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-2.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Agriculture Courses</h3>
 									</a>
 									<h4>Technology / Space / Aerospace</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>40 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 320</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>40 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 320</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -631,19 +631,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-3.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-3.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Marine Engineering</h3>
 									</a>
 									<h4>Technology / Ocean / Marine</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>04 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 1020</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>04 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 1020</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -651,19 +651,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-4.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-4.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Building, Construction Management</h3>
 									</a>
 									<h4>Technology / Construction / Building</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>32 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 124</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>32 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 124</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -675,19 +675,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-5.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-5.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Fashion Technology</h3>
 									</a>
 									<h4>Technology / Trends / Fashion</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>10 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 570</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>10 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 570</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -695,19 +695,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-6.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-6.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Agriculture Courses</h3>
 									</a>
 									<h4>Technology / Space / Aerospace</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>40 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 320</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>40 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 320</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -715,19 +715,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-7.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-7.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Marine Engineering</h3>
 									</a>
 									<h4>Technology / Ocean / Marine</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>04 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 1020</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>04 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 1020</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -735,19 +735,19 @@
 							<!--POPULAR COURSES-->
 							<div class="home-top-cour">
 								<!--POPULAR COURSES IMAGE-->
-								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/course/sm-8.jpg" alt=""> </div>
+								<div class="col-md-3"> <img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/course/sm-8.jpg" alt=""> </div>
 								<!--POPULAR COURSES: CONTENT-->
 								<div class="col-md-9 home-top-cour-desc">
-									<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">
+									<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">
 										<h3>Building, Construction Management</h3>
 									</a>
 									<h4>Technology / Construction / Building</h4>
 									<p>Classes started from coming friday(21 jun 2017),total seats 72 and available seats 10</p> <span class="home-top-cour-rat">4.2</span>
 									<div class="hom-list-share">
 										<ul>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>32 Aavailable</a> </li>
-											<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 124</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Book Now</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-eye" aria-hidden="true"></i>32 Aavailable</a> </li>
+											<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html"><i class="fa fa-share-alt" aria-hidden="true"></i> 124</a> </li>
 										</ul>
 									</div>
 								</div>
@@ -778,7 +778,7 @@
 									<div class="ho-ev-date"><span>07</span><span>jan,2018</span>
 									</div>
 									<div class="ho-ev-link">
-										<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+										<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 											<h4>Latinoo College Expo 2018</h4>
 										</a>
 										<p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
@@ -789,7 +789,7 @@
 									<div class="ho-ev-date"><span>12</span><span>jan,2018</span>
 									</div>
 									<div class="ho-ev-link">
-										<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+										<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 											<h4>Training at Team Fabio Clemente</h4>
 										</a>
 										<p>Nulla at velit convallis venenatis.</p>
@@ -800,7 +800,7 @@
 									<div class="ho-ev-date"><span>26</span><span>jan,2018</span>
 									</div>
 									<div class="ho-ev-link">
-										<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+										<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 											<h4>Nulla at velit convallis</h4>
 										</a>
 										<p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
@@ -811,7 +811,7 @@
 									<div class="ho-ev-date"><span>18</span><span>jan,2018</span>
 									</div>
 									<div class="ho-ev-link">
-										<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+										<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 											<h4>Admissions Information Session and Tour</h4>
 										</a>
 										<p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
@@ -834,7 +834,7 @@
 						<div class="ho-event ho-event-mob-bot-sp">
 							<ul>
 								<li>
-									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/event/1.jpg" alt="">
+									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/event/1.jpg" alt="">
 									</div>
 									<div class="ho-ev-link">
 										<a href="#">
@@ -845,7 +845,7 @@
 									</div>
 								</li>
 								<li>
-									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/event/2.jpg" alt="">
+									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/event/2.jpg" alt="">
 									</div>
 									<div class="ho-ev-link">
 										<a href="#">
@@ -856,7 +856,7 @@
 									</div>
 								</li>
 								<li>
-									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/event/3.jpg" alt="">
+									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/event/3.jpg" alt="">
 									</div>
 									<div class="ho-ev-link">
 										<a href="#">
@@ -867,7 +867,7 @@
 									</div>
 								</li>
 								<li>
-									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/event/4.jpg" alt=""></div>
+									<div class="ho-ev-img"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/event/4.jpg" alt=""></div>
 									<div class="ho-ev-link">
 										<a href="#">
 											<h4>Then came the night of the first falling star.</h4>
@@ -970,29 +970,29 @@
 						<div class="bot-gal h-gal ho-event-mob-bot-sp">
 							<h4>Photo Gallery</h4>
 							<ul>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/8.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/8.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/9.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/9.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/10.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/10.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/11.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/11.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/1.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/1.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/2.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/2.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/3.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/3.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/4.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/4.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/5.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/5.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/6.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/6.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/7.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/7.jpg" alt="">
 								</li>
-								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/theme1/'); ?>images/ami/8.jpg" alt="">
+								<li><img class="materialboxed" data-caption="Education master image captions" src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/ami/8.jpg" alt="">
 								</li>
 							</ul>
 						</div>
@@ -1020,7 +1020,7 @@
 										<div class="ho-ev-date"><span>07</span><span>jan,2018</span>
 										</div>
 										<div class="ho-ev-link">
-											<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+											<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 												<h4>Latinoo College Expo 2018</h4>
 											</a>
 											<p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
@@ -1031,7 +1031,7 @@
 										<div class="ho-ev-date"><span>12</span><span>jan,2018</span>
 										</div>
 										<div class="ho-ev-link">
-											<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+											<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 												<h4>Training at Team Fabio Clemente</h4>
 											</a>
 											<p>Nulla at velit convallis venenatis.</p>
@@ -1042,7 +1042,7 @@
 										<div class="ho-ev-date"><span>26</span><span>jan,2018</span>
 										</div>
 										<div class="ho-ev-link">
-											<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+											<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 												<h4>Nulla at velit convallis</h4>
 											</a>
 											<p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
@@ -1053,7 +1053,7 @@
 										<div class="ho-ev-date"><span>18</span><span>jan,2018</span>
 										</div>
 										<div class="ho-ev-link">
-											<a href="<?php echo base_url('assets/frontend/theme1/'); ?>events.html">
+											<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>events.html">
 												<h4>Admissions Information Session and Tour</h4>
 											</a>
 											<p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
@@ -1075,14 +1075,14 @@
 					<div class="row">
 						<div class="bot-book">
 							<div class="col-md-2 bb-img">
-								<img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/3.png" alt="">
+								<img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/3.png" alt="">
 							</div>
 							<div class="col-md-7 bb-text">
 								<h4>therefore always free from repetition</h4>
 								<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
 							</div>
 							<div class="col-md-3 bb-link">
-								<a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Book This Course</a>
+								<a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Book This Course</a>
 							</div>
 						</div>
 					</div>
@@ -1106,27 +1106,27 @@
 					<div class="col-md-4 foot-tc-mar-t-o">
 						<h4>Top Courses</h4>
 						<ul>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Accounting/Finance</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">civil engineering</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Art/Design</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Marine Engineering</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Business Management</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Journalism/Writing</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Physical Education</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Political Science</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Accounting/Finance</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">civil engineering</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Art/Design</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Marine Engineering</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Business Management</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Journalism/Writing</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Physical Education</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Political Science</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
 						<h4>New Courses</h4>
 						<ul>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Sciences</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Statistics</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Web Design/Development</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">SEO</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Google Business</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Graphics Design</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Networking Courses</a></li>
-							<li><a href="<?php echo base_url('assets/frontend/theme1/'); ?>course-details.html">Information technology</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Sciences</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Statistics</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Web Design/Development</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">SEO</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Google Business</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Graphics Design</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Networking Courses</a></li>
+							<li><a href="<?php echo base_url('assets/frontend/university/theme1/'); ?>course-details.html">Information technology</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
@@ -1210,7 +1210,7 @@
 						</ul>
 					</div>
 					<div class="log-in-pop-right">
-						<a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/cancel.png" alt="" />
+						<a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/cancel.png" alt="" />
 						</a>
 						<h4>Login</h4>
 						<p>Don't have an account? Create your account. It's take less then a minutes</p>
@@ -1263,7 +1263,7 @@
 						</ul>
 					</div>
 					<div class="log-in-pop-right">
-						<a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/cancel.png" alt="" />
+						<a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/cancel.png" alt="" />
 						</a>
 						<h4>Create an Account</h4>
 						<p>Don't have an account? Create your account. It's take less then a minutes</p>
@@ -1320,7 +1320,7 @@
 						</ul>
 					</div>
 					<div class="log-in-pop-right">
-						<a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url('assets/frontend/theme1/'); ?>images/cancel.png" alt="" />
+						<a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url('assets/frontend/university/theme1/'); ?>images/cancel.png" alt="" />
 						</a>
 						<h4>Forgot password</h4>
 						<p>Don't have an account? Create your account. It's take less then a minutes</p>
@@ -1345,11 +1345,11 @@
 		</section>
 
 		<!--Import jQuery before materialize.js-->
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/jquery-2.2.4.min.js"></script>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/main.min.js"></script>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/materialize.min.js"></script>
-		<script src="<?php echo base_url('assets/frontend/theme1/'); ?>js/custom.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/jquery-2.2.4.min.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/main.min.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/materialize.min.js"></script>
+		<script src="<?php echo base_url('assets/frontend/university/theme1/'); ?>js/custom.js"></script>
 		<script>
 			$('#myModal').modal({
 					dismissible: true
