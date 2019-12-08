@@ -1,4 +1,4 @@
-# Advanced Multi University Management System With White Lable
+# Advanced Multi University Management System With White Lable and Licencing
 Author:-  Anil Dollor<br>
 Whatsapp: +91-7999452711<br>
 Skype:-   anildalar<br>
