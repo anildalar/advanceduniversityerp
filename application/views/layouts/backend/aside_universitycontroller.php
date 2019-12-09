@@ -68,9 +68,9 @@
 
 					<li class=""><a href="/admin/visitors"><i class="fa fa-angle-double-right"></i> Colleges</a></li>
 
-					<li class=""><a href="/admin/generalcall"><i class="fa fa-angle-double-right"></i> Phone Call Log</a></li>
+					<li class=""><a href="/admin/generalcall"><i class="fa fa-angle-double-right"></i> Students</a></li>
 
-					<li class=""><a href="/admin/dispatch"><i class="fa fa-angle-double-right"></i> Postal Dispatch</a></li>
+					<li class=""><a href="/admin/dispatch"><i class="fa fa-angle-double-right"></i> Degree</a></li>
 
 					<li class=""><a href="/admin/receive"><i class="fa fa-angle-double-right"></i> Postal Receive</a></li>
 
