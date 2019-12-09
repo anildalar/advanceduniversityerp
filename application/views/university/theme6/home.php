@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
 	<head>
 		<!-- Site Title-->
-		<title>Home</title>
+		<title><?php echo $university_info->university_name; ?>-<?php echo $university_info->university_slogan; ?></title>
 		<meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +62,7 @@
 								<!-- RD Navbar Toggle-->
 								<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
 								<button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
-								<div class="rd-navbar-brand"><a class="brand-name" href="index.html"><span class="brand-logo veil">ALMA UNIVERSITY</span><img src="<?php echo base_url('assets/frontend/university/theme6/'); ?>images/brand-default-178x58.png" width="178" height="58" alt="ALMA"></a></div>
+								<div class="rd-navbar-brand"><a class="brand-name" href="index.html"><span class="brand-logo veil"><?php echo $university_info->university_name; ?></span><img src="uploads/university/<?php echo explode('.',$university_info->domain_name)[0];  ?>/<?php echo $university_info->university_logo; ?>" width="178" height="58" alt="ALMA"></a></div>
 							</div>
 							<div class="rd-navbar-collapse animated">
 								<div class="rd-navbar-collapse-items">
