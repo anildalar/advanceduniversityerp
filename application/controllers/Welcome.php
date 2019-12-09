@@ -8,7 +8,6 @@ class Welcome extends Base_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->library('customlib');
-		$this->load->model('News_model');
 	}
 	
 	//3. Method (Function) Area

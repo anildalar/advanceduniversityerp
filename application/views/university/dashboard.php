@@ -60,7 +60,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/studentfee">
+							<a href="/studentfee">
 								<span class="info-box-icon bg-green"><i class="fa fa-money"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Monthly Fees Collection</span>
@@ -72,7 +72,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/admin/expense">
+							<a href="/admin/expense">
 								<span class="info-box-icon bg-red"><i class="fa fa-credit-card"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Monthly Expenses</span>
@@ -84,7 +84,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/student/search">
+							<a href="/student/search">
 								<span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Student</span>
@@ -95,7 +95,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/student/search">
+							<a href="/student/search">
 								<span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Student</span>
@@ -161,7 +161,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/studentfee">
+							<a href="/studentfee">
 								<span class="info-box-icon bg-green"><i class="fa fa-money"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Monthly Fees Collection</span>
@@ -173,7 +173,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/admin/expense">
+							<a href="/admin/expense">
 								<span class="info-box-icon bg-red"><i class="fa fa-credit-card"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Monthly Expenses</span>
@@ -185,7 +185,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/student/search">
+							<a href="/student/search">
 								<span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Student</span>
@@ -196,7 +196,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="info-box">
-							<a href="https://demo1.smart-school.in/student/search">
+							<a href="/student/search">
 								<span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
 								<div class="info-box-content">
 									<span class="info-box-text">Student</span>

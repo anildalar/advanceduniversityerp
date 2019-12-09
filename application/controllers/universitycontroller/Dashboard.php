@@ -7,8 +7,6 @@ class Dashboard extends Admin_Controller {
 	//2. Constructor Area
 	public function __construct(){
 		parent::__construct();
-		
-		//$this->load->model('University_model');
 	}
 	
 	
