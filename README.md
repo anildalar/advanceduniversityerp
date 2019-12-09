@@ -17,4 +17,7 @@ https://www.radiustheme.com/demo/html/academics/academics/index.html
 http://html.kodesolution.live/s/studypress/v6.0/demo/index-mp-layout1.html
 
 Backend-
+
+https://adminlte.io/themes/AdminLTE/index2.html
+
 https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18
