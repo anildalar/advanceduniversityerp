@@ -28,7 +28,7 @@ class Base_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$lc = new Licence_Controller();
-		$lc->checkLicence($uid)
+		//$lc->checkLicence($uid);
 		
 		$this->current_domain = $_SERVER['HTTP_HOST'];
 		
