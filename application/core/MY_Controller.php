@@ -1,4 +1,22 @@
 <?php
+class Licence_Controller extends CI_Controller 
+{
+	
+	function __construct()
+	{
+		parent::__construct();
+		
+	}
+	public function checkLicence($domain_name){
+		$data = $this->University_model->getByDomain($domain_name);
+		$cur_date = strtotime(date('Y-m-d'));
+		$exp_date = strtotime($data['licence_expire_at']);//Unix Time Stamp
+		if($cur_date > $exp_date){
+			die;
+		}
+		
+	}
+}
 class Base_Controller extends CI_Controller 
 {
 	public $user_id;
@@ -9,6 +27,8 @@ class Base_Controller extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$lc = new Licence_Controller();
+		$lc->checkLicence($uid)
 		
 		$this->current_domain = $_SERVER['HTTP_HOST'];
 		
@@ -31,3 +51,4 @@ class Admin_Controller extends Base_Controller
 		
 	}	
 }
+

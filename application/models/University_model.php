@@ -29,6 +29,22 @@ class University_model extends MY_Model {
             return $query->result_array(); // array of result
         }
     }
+	public function getByDomain($domain_name = null) {
+        $this->db->select()->from('universities');
+        if ($domain_name != null) {
+            $this->db->where('domain_name', $domain_name);
+        } else {
+            $this->db->order_by('id');
+        }
+		
+        $query = $this->db->get();
+        if ($id != null) {
+            return $query->row_array(); // single row
+        } else {
+            return $query->result_array(); // array of result
+        }
+    }
+	
 	
     public function add($data) {
         if (isset($data['id'])) {
